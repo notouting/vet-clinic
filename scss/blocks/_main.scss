@@ -1,9 +1,15 @@
 /* HERO SECTION */
+main{
+    width: 100%;
+    background: url(../images/main-bg.png),no-repeat;
+
+}
 .hero-content {
     height: 736px;
-    background-image: url(../images/hero-bg.png),url(../images/hero-parrot.png);
+    background-image: url(../images/hero-bg.png), url(../images/hero-parrot.png);
     background-position: calc(50% - 496.5px) -180px, calc(50% + 655px) bottom;
     background-repeat: no-repeat;
+
     &__box {
         margin-left: calc(50% + 20px);
         padding-top: 145.77px;
@@ -47,11 +53,66 @@
             padding: 15px 48px;
             border: none;
         }
-        &-btn:hover{
+
+        &-btn:hover {
             opacity: 0.8;
         }
-        &-btn:active{
+
+        &-btn:active {
             opacity: 0.6;
         }
+    }
+}
+
+.quote-content {
+    margin-top: 102px;
+    width: 100%;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        max-width: 1000px;
+        margin-inline: auto;
+        width: 100%;
+
+        .open-quote {
+            margin-bottom: 70px;
+            margin-right: 50px;
+        }
+
+        q {
+            display: flex;
+            width: 100%;
+            quotes: none;
+            color: #949494;
+            text-align: center;
+            font-family: $fontFutura;
+            font-size: 20px;
+            font-weight: 400;
+
+            span {
+                width: 753px;
+                height: 78px;
+                text-align: center;
+            }
+
+        }
+
+        .close-qoute {
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        &-cite {
+            color: #333;
+            font-family: $fontFutura;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            margin: 0 auto;
+            margin-top: 70px;
+            padding-bottom: 191px;
+        }
+
     }
 }
