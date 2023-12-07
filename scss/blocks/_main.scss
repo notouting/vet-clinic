@@ -1,7 +1,11 @@
 /* HERO SECTION */
 .hero-content {
+    height: 736px;
+    background-image: url(../images/hero-bg.png),url(../images/hero-parrot.png);
+    background-position: calc(50% - 496.5px) -180px, calc(50% + 655px) bottom;
+    background-repeat: no-repeat;
     &__box {
-        margin-left: calc(50% - 20px);
+        margin-left: calc(50% + 20px);
         padding-top: 145.77px;
 
         &-title {
@@ -30,6 +34,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 21px;
+            margin: 29px 0 38px 0;
         }
 
         &-btn {
@@ -41,6 +46,12 @@
             border-radius: 3px;
             padding: 15px 48px;
             border: none;
+        }
+        &-btn:hover{
+            opacity: 0.8;
+        }
+        &-btn:active{
+            opacity: 0.6;
         }
     }
 }
