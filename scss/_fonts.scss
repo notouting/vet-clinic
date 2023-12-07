@@ -1,1 +1,39 @@
-/* FONTS */ 
+/* FONTS */
+@font-face {
+    font-display: auto;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/FuturaPT-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-display: auto;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/FuturaPT-Book.woff') format('woff');
+}
+
+@font-face {
+    font-display: auto;
+    font-family: 'Futura PT Demi';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/FuturaPT-Demi.woff') format('woff');
+}
+
+@font-face {
+    font-display: auto;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/FuturaPT-Medium.woff') format('woff');
+}
+@font-face {
+    font-display: auto;
+    font-family: 'VAG World Bold';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/FuturaPT-Medium.woff') format('woff');
+}

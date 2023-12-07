@@ -333,6 +333,41 @@ template {
 }
 
 /* FONTS */
+@font-face {
+  font-display: auto;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/FuturaPT-Bold.woff") format("woff");
+}
+@font-face {
+  font-display: auto;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FuturaPT-Book.woff") format("woff");
+}
+@font-face {
+  font-display: auto;
+  font-family: "Futura PT Demi";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/FuturaPT-Demi.woff") format("woff");
+}
+@font-face {
+  font-display: auto;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/FuturaPT-Medium.woff") format("woff");
+}
+@font-face {
+  font-display: auto;
+  font-family: "VAG World Bold";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/FuturaPT-Medium.woff") format("woff");
+}
 /* GENERAL */
 * {
   box-sizing: border-box;
@@ -358,7 +393,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Arial", sans-serif;
-  background-color: #fff;
+  background-color: #F9F9F9;
 }
 
 img {
@@ -366,8 +401,18 @@ img {
   height: auto;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 main {
   flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 /* VISUALLY-HIDDEN */
@@ -385,7 +430,151 @@ main {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1230px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+/* HEADER START */
+.site-header {
+  width: 100%;
+  height: 108px;
+}
+.site-header__information {
+  height: 39px;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1117px;
+  display: flex;
+  background-color: #F9F9F9;
+}
+.site-header__information__box {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Futura PT";
+}
+.site-header__information__box-address {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+.site-header__information__box-address svg {
+  margin-right: 9px;
+}
+.site-header__information__box-box-link {
+  font-family: "Futura PT";
+  color: #333333;
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+.site-header__information__box-box-link svg {
+  margin-right: 9px;
+}
+.site-header__information__box-box-link:hover {
+  color: #FFBD54;
+}
+.site-header__information__box__days-box {
+  width: 100%;
+  max-width: 276px;
+  display: flex;
+  justify-content: space-between;
+}
+.site-header__information__box__days-box-days {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+.site-header__information__box__days-box-days svg {
+  margin-right: 9px;
+}
+.site-header__navigation {
+  font-family: "Futura PT";
+  width: 100%;
+  height: 61px;
+  background-color: #fff;
+  display: flex;
+}
+.site-header__navigation-wrapper {
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header__navigation__logo-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 177.5px;
+}
+.site-header__navigation__logo-img {
+  position: absolute;
+}
+.site-header__navigation__logo-img:hover {
+  opacity: 0.8;
+}
+.site-header__navigation__logo-img:active {
+  opacity: 0.6;
+}
+.site-header__navigation__nav {
+  width: 100%;
+  max-width: 725px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header__navigation__nav-list {
+  width: 100%;
+  max-width: 692px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.site-header__navigation__nav-list a:hover {
+  background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
+  background-position: 0 5;
+}
+.site-header__navigation__nav-list a:active {
+  color: #F4FFAD;
+  background: none;
+}
+.site-header__navigation button {
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.site-header__navigation button p {
+  margin: 0;
+  padding: 0;
+}
+.site-header__navigation button p:hover {
+  background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
+}
+
+.site-header__information__box-link:hover {
+  color: #FFBD54;
+}
+
+.site-header__information__box-link:active {
+  opacity: 0.6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */
