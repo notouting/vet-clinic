@@ -462,6 +462,7 @@ a {
   color: #333;
   font-size: 14px;
   font-weight: 500;
+  font-family: "Futura PT";
 }
 .site-header__information__box-address svg {
   margin-right: 9px;
@@ -483,7 +484,7 @@ a {
 }
 .site-header__information__box__days-box {
   width: 100%;
-  max-width: 276px;
+  max-width: 286px;
   display: flex;
   justify-content: space-between;
 }
@@ -496,6 +497,9 @@ a {
 }
 .site-header__information__box__days-box-days svg {
   margin-right: 9px;
+}
+.site-header__information__box__days-box .days2 {
+  margin-left: 17px;
 }
 .site-header__navigation {
   font-family: "Futura PT";
@@ -545,12 +549,12 @@ a {
   padding: 0;
 }
 .site-header__navigation__nav-list a:hover {
+  opacity: 0.8;
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
-  background-position: 0 5;
 }
 .site-header__navigation__nav-list a:active {
-  color: #F4FFAD;
-  background: none;
+  background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
+  opacity: 0.6;
 }
 .site-header__navigation button {
   background-color: #fff;
@@ -565,6 +569,31 @@ a {
 .site-header__navigation button p:hover {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
+.site-header__navigation button:hover {
+  opacity: 0.8;
+}
+.site-header__navigation button:active {
+  opacity: 0.6;
+}
+
+.site-header__information__box-link,
+.site-header__information__box-days {
+  font-family: "Futura PT";
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.site-header__navigation__nav-link {
+  font-family: "Futura PT";
+  color: #333;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 
 .site-header__information__box-link:hover {
   color: #FFBD54;
@@ -572,6 +601,47 @@ a {
 
 .site-header__information__box-link:active {
   opacity: 0.6;
+}
+
+/* HERO SECTION */
+.hero-content__box {
+  margin-left: calc(50% - 20px);
+  padding-top: 145.77px;
+}
+.hero-content__box-title {
+  width: 100%;
+  max-width: 608px;
+  color: #333333;
+  font-family: "Futura PT";
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 64px;
+}
+.hero-content__box-title span {
+  color: #78C0DE;
+  font-family: "Futura PT";
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 64px;
+}
+.hero-content__box-text {
+  width: 100%;
+  max-width: 495px;
+  color: #949494;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.hero-content__box-btn {
+  color: #FFF;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #333333;
+  border-radius: 3px;
+  padding: 15px 48px;
+  border: none;
 }
 
 * {

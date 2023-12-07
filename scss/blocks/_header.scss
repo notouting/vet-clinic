@@ -25,6 +25,7 @@
                 color: #333;
                 font-size: 14px;
                 font-weight: 500;
+                font-family: $fontFutura;
 
                 svg {
                     margin-right: 9px;
@@ -56,7 +57,7 @@
 
             &__days-box {
                 width: 100%;
-                max-width: 276px;
+                max-width: 286px;
                 display: flex;
                 justify-content: space-between;
 
@@ -70,6 +71,10 @@
                     svg {
                         margin-right: 9px;
                     }
+                }
+
+                .days2 {
+                    margin-left: 17px;
                 }
             }
 
@@ -131,13 +136,13 @@
                 padding: 0;
 
                 a:hover {
+                    opacity: 0.8;
                     background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
-                    background-position: 0 5;
                 }
 
                 a:active {
-                    color: #F4FFAD;
-                    background: none;
+                    background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
+                    opacity: 0.6;
                 }
             }
         }
@@ -159,8 +164,35 @@
             }
         }
 
+        button:hover {
+            opacity: 0.8;
+        }
+
+        button:active {
+            opacity: 0.6;
+        }
+
 
     }
+}
+
+.site-header__information__box-link,
+.site-header__information__box-days{
+font-family: $fontFutura;
+color: #333;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.site-header__navigation__nav-link {
+    font-family: $fontFutura;
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .site-header__information__box-link:hover {

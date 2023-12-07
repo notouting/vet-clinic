@@ -1,0 +1,46 @@
+/* HERO SECTION */
+.hero-content {
+    &__box {
+        margin-left: calc(50% - 20px);
+        padding-top: 145.77px;
+
+        &-title {
+            width: 100%;
+            max-width: 608px;
+            color: $colorPrimary;
+            font-family: $fontFutura;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 64px;
+
+            span {
+                color: #78C0DE;
+                font-family: $fontFutura;
+                font-size: 70px;
+                font-weight: 700;
+                line-height: 64px;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            max-width: 495px;
+            color: #949494;
+            font-family: $fontFutura;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+
+        &-btn {
+            color: #FFF;
+            font-family: $fontFutura;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: $colorPrimary;
+            border-radius: 3px;
+            padding: 15px 48px;
+            border: none;
+        }
+    }
+}
