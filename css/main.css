@@ -857,6 +857,64 @@ button:active {
   opacity: 0.6;
 }
 
+/* SUBSCRIPTION SECTION */
+.subscription-content {
+  height: 481px;
+  background-image: url(../images/bud-v-kurse-bg-dog.png), url(../images/bud-v-kurse-bg.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: calc(50% + 362px) 0px, 0 110px;
+  margin-top: 127px;
+}
+.subscription-content .subscription-content__box {
+  padding-top: 200px;
+}
+.subscription-content .subscription-content__box h2 {
+  color: #FFF;
+  font-family: "Futura PT";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 32px;
+  margin-left: 178px;
+}
+.subscription-content .subscription-content__box .subscription-content__wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 178px;
+}
+.subscription-content .subscription-content__box .subscription-content__wrapper input {
+  padding: 18px 147px 12px 22px;
+  background-color: #FFF;
+  border: none;
+}
+.subscription-content .subscription-content__box .subscription-content__wrapper input::-moz-placeholder {
+  color: #949494;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 3px;
+}
+.subscription-content .subscription-content__box .subscription-content__wrapper input::placeholder {
+  color: #949494;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 3px;
+}
+.subscription-content .subscription-content__box .subscription-content__wrapper button {
+  background-color: #333333;
+  color: #FFF;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 51px;
+  border-radius: 3px;
+  border: none;
+  margin-left: 21px;
+}
+
 * {
   padding: 0;
   margin: 0;

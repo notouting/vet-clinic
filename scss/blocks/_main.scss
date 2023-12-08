@@ -145,17 +145,19 @@ main {
             justify-content: space-between;
             margin: 0 auto;
 
-            .arrow-div{
+            .arrow-div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 50px;
                 height: 50px;
             }
-            .arrow-div:hover{
+
+            .arrow-div:hover {
                 background-color: #FFF;
             }
-            .arrow-div:active{
+
+            .arrow-div:active {
                 background-color: #FFF;
                 opacity: 0.6;
             }
@@ -292,4 +294,61 @@ button:hover {
 
 button:active {
     opacity: 0.6;
+}
+
+/* SUBSCRIPTION SECTION */
+.subscription-content {
+    height: 481px;
+    background-image: url(../images/bud-v-kurse-bg-dog.png), url(../images/bud-v-kurse-bg.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: calc(50% + 362px) 0px, 0 110px;
+    margin-top: 127px;
+
+    .subscription-content__box {
+        padding-top: 200px;
+
+        h2 {
+            color: #FFF;
+            font-family: $fontFutura;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 20px;
+            margin-bottom: 32px;
+            margin-left: 178px;
+        }
+
+        .subscription-content__wrapper {
+            display: flex;
+            align-items: center;
+            margin-left: 178px;
+
+            input {
+                padding: 18px 147px 12px 22px;
+                background-color: #FFF;
+                border: none;
+            }
+
+            input::placeholder {
+                color: #949494;
+                font-family: $fontFutura;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                border-radius: 3px;
+
+            }
+
+            button {
+                background-color: $colorPrimary;
+                color: #FFF;
+                font-family: $fontFutura;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 14px 51px;
+                border-radius: 3px;
+                border: none;
+                margin-left: 21px;
+            }
+        }
+    }
 }
