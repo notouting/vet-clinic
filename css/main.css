@@ -731,6 +731,20 @@ main {
   justify-content: space-between;
   margin: 0 auto;
 }
+.service-content .container div .arrow-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.service-content .container div .arrow-div:hover {
+  background-color: #FFF;
+}
+.service-content .container div .arrow-div:active {
+  background-color: #FFF;
+  opacity: 0.6;
+}
 .service-content .container div ul {
   width: 100%;
   max-width: 1223px;
@@ -763,6 +777,83 @@ main {
   opacity: 0.8;
 }
 .service-content .container div ul li:active {
+  opacity: 0.6;
+}
+
+/* OBSERVE SECTION */
+.observe-content {
+  width: 100%;
+}
+.observe-content__box {
+  width: 100%;
+  max-width: 1223px;
+  margin: 0 auto;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.observe-content__box div {
+  width: 100%;
+  max-width: 492px;
+  margin-right: 70px;
+}
+.observe-content__box div h2 {
+  margin-top: 37px;
+  font-family: "Futura PT Demi";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 20px;
+  color: #333333;
+}
+.observe-content__box div p {
+  color: #949494;
+  font-family: "Futura PT";
+  font-weight: 400;
+  font-size: 16px;
+  margin: 18px 0 34px 0;
+}
+.observe-content__box div div {
+  display: flex;
+}
+.observe-content__box div div .observe-content__btn-price {
+  display: flex;
+  align-items: center;
+  background-color: #FFBD54;
+  color: #fff;
+  margin-right: 8px;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  padding: 15px 36px;
+  border-radius: 3px;
+}
+.observe-content__box div div .observe-content__btn-price .observe-content__btn-img {
+  margin-right: 8px;
+}
+.observe-content__box div div .observe-content__btn-submit {
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  color: #fff;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 19px;
+  border: none;
+  padding: 15px 36px;
+  border-radius: 3px;
+}
+.observe-content__box div div .observe-content__btn-submit .observe-content__btn-img {
+  margin-right: 8px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
   opacity: 0.6;
 }
 

@@ -145,6 +145,21 @@ main {
             justify-content: space-between;
             margin: 0 auto;
 
+            .arrow-div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+            }
+            .arrow-div:hover{
+                background-color: #FFF;
+            }
+            .arrow-div:active{
+                background-color: #FFF;
+                opacity: 0.6;
+            }
+
             ul {
                 width: 100%;
                 max-width: 1223px;
@@ -186,4 +201,95 @@ main {
             }
         }
     }
+}
+
+/* OBSERVE SECTION */
+.observe-content {
+    width: 100%;
+
+    &__box {
+        width: 100%;
+        max-width: 1223px;
+        margin: 0 auto;
+        padding: 35px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+
+        div {
+            width: 100%;
+            max-width: 492px;
+            margin-right: 70px;
+
+
+            h2 {
+                margin-top: 37px;
+                font-family: $fontFuturaDemi;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 20px;
+                color: $colorPrimary;
+
+            }
+
+            p {
+                color: #949494;
+                font-family: $fontFutura;
+                font-weight: 400;
+                font-size: 16px;
+                margin: 18px 0 34px 0;
+            }
+
+            div {
+                display: flex;
+
+
+                .observe-content__btn-price {
+                    display: flex;
+                    align-items: center;
+                    background-color: $colorSecondary;
+                    color: #fff;
+                    margin-right: 8px;
+                    font-family: $fontFutura;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: none;
+                    padding: 15px 36px;
+                    border-radius: 3px;
+
+                    .observe-content__btn-img {
+                        margin-right: 8px;
+                    }
+
+                }
+
+
+                .observe-content__btn-submit {
+                    display: flex;
+                    align-items: center;
+                    background-color: $colorPrimary;
+                    color: #fff;
+                    font-family: $fontFutura;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-left: 19px;
+                    border: none;
+                    padding: 15px 36px;
+                    border-radius: 3px;
+
+                    .observe-content__btn-img {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
 }
