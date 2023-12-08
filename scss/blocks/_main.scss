@@ -400,6 +400,14 @@ button:active {
                     font-size: 14px;
                     font-weight: 500;
                 }
+
+                a:hover {
+                    opacity: 0.8;
+                }
+
+                a:active {
+                    opacity: 0.6;
+                }
             }
         }
 
@@ -439,6 +447,119 @@ button:active {
                     color: #949494;
                     font-family: $fontFutura;
                     font-size: 14px;
+                    font-weight: 500;
+                }
+
+                a:hover {
+                    opacity: 0.8;
+                }
+
+                a:active {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.feedback-content {
+    margin-top: 265px;
+    width: 100%;
+
+    .feedback-container {
+        width: 100%;
+        max-width: 1463px;
+        display: flex;
+
+        .feedback-content__box {
+            width: 100%;
+            max-width: 990px;
+            background: url(../images/feedback-bg.png), no-repeat;
+            background-color: #333;
+            padding-top: 62px;
+            padding-left: 166px;
+
+            h2 {
+                color: #FFF;
+                font-family: $fontFutura;
+                font-size: 48px;
+                font-weight: 700;
+            }
+
+            p {
+                color: #949494;
+                font-family: $fontFutura;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                max-width: 339px;
+                margin-bottom: 30px;
+            }
+
+            form {
+                width: 100%;
+                max-width: 375px;
+                height: 373px;
+
+
+                label {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                        max-width: 375px;
+                        height: 50px;
+                        border: none;
+                        background-color: #FFF;
+                    }
+                    input:invalid{
+                        border: 2px solid #FF6347;
+                    }
+                    input:valid{
+                        border: 2px solid #90EE90;
+                    }
+
+                    .feedback-content__input2 {
+                        margin: 14px 0;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        max-width: 375px;
+                        border: none;
+                        background-color: #FFF;
+                        height: 165px;
+                        padding: 22px 0 0 17px;
+
+                        span{
+
+                        }
+                    }
+
+                    input::placeholder,
+                    textarea {
+                        color: #949494;
+                        font-family: $fontFutura;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+
+                    input::placeholder {
+                        padding-left: 17px;
+                    }
+
+                    input:valid {}
+                }
+
+                button {
+                    margin-top: 25px;
+                    background-color: $colorSecondary;
+                    border: none;
+                    border-radius: 1px;
+                    padding: 15px 49px;
+                    color: #FFF;
+                    font-family: $fontFutura;
+                    font-size: 16px;
                     font-weight: 500;
                 }
             }
