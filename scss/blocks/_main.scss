@@ -352,3 +352,96 @@ button:active {
         }
     }
 }
+
+/* NEWS SECTION */
+.news-content {
+    .news-content__title {
+        text-align: center;
+        color: $colorPrimary;
+        font-family: $fontFutura;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 165px 0 95px 0;
+    }
+
+    .news-content__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+        .news-content__item {
+            width: 305px;
+            height: 435px;
+
+            div {
+                padding: 30px;
+
+                h3 {
+                    color: #000;
+                    font-family: $fontFutura;
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 25px;
+                }
+
+                p {
+                    color: #949494;
+                    font-family: $fontFutura;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+
+                span {
+                    color: #949494;
+                    font-family: $fontFutura;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .news-content__item-big {
+            display: flex;
+            width: 640px;
+            height: 435px;
+
+            div {
+                padding: 30px;
+
+                h3 {
+                    color: #000;
+                    font-family: $fontFutura;
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 25px;
+                }
+
+                p {
+                    color: #949494;
+                    font-family: $fontFutura;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+
+                pre {
+                    color: #3D9CEA;
+                    font-family: $fontFutura;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+
+                span {
+                    color: #949494;
+                    font-family: $fontFutura;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
