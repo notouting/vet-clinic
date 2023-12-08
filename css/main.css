@@ -1014,6 +1014,8 @@ button:active {
   width: 100%;
   max-width: 1463px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .feedback-content .feedback-container .feedback-content__box {
   width: 100%;
