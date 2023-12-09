@@ -745,16 +745,18 @@ main {
   background-color: #FFF;
   opacity: 0.6;
 }
-.service-content .container div ul {
+.service-content .container div .service-content__box-list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: auto;
   width: 100%;
   max-width: 1223px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding-bottom: 13px;
   padding: 0;
+  margin-bottom: 14px;
 }
-.service-content .container div ul li {
+.service-content .container div .service-content__box-list li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -764,7 +766,7 @@ main {
   height: 201px;
   border-radius: 5px;
 }
-.service-content .container div ul li h3 {
+.service-content .container div .service-content__box-list li h3 {
   margin-top: 22px;
   text-align: center;
   color: #333333;
@@ -773,10 +775,10 @@ main {
   font-size: 18px;
   line-height: 22px;
 }
-.service-content .container div ul li:hover {
+.service-content .container div .service-content__box-list li:hover {
   opacity: 0.8;
 }
-.service-content .container div ul li:active {
+.service-content .container div .service-content__box-list li:active {
   opacity: 0.6;
 }
 
@@ -790,6 +792,7 @@ main {
   margin: 0 auto;
   padding: 35px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #fff;
 }
@@ -928,11 +931,12 @@ button:active {
 .news-content .news-content__list {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
 }
 .news-content .news-content__list .news-content__item {
-  width: 305px;
+  max-width: 305px;
   height: 435px;
 }
 .news-content .news-content__list .news-content__item div {
@@ -1047,6 +1051,7 @@ button:active {
 }
 .feedback-content .feedback-container .feedback-content__box form label {
   width: 100%;
+  input-border: 2px solid #90EE90;
 }
 .feedback-content .feedback-container .feedback-content__box form label input {
   width: 100%;
@@ -1055,11 +1060,11 @@ button:active {
   border: none;
   background-color: #FFF;
 }
-.feedback-content .feedback-container .feedback-content__box form label input:invalid {
+.feedback-content .feedback-container .feedback-content__box form label input:not(:focus):not(:-moz-placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
-.feedback-content .feedback-container .feedback-content__box form label input:valid {
-  border: 2px solid #90EE90;
+.feedback-content .feedback-container .feedback-content__box form label input:not(:focus):not(:placeholder-shown):invalid {
+  border: 2px solid #FF6347;
 }
 .feedback-content .feedback-container .feedback-content__box form label .feedback-content__input2 {
   margin: 14px 0;
@@ -1103,59 +1108,98 @@ button:active {
   font-weight: 500;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-content__box-list {
+    grid-template-columns: auto auto auto;
+  }
+  .hero-content {
+    background-size: 500px 500px, 0;
+    background-position: calc(50% - 230px), 0;
+  }
+  .observe-content__img {
+    margin: 0 auto;
+  }
+  .observe-content__content {
+    margin: 0 auto;
+  }
+  .news-content__list {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .observe-content__img {
+    margin: 0 auto;
+  }
+  .observe-content__content {
+    margin: 0 auto;
+  }
+}
 /* FOOTER */
 .site-footer {
   width: 100%;
   margin-top: 247px;
   background-color: #F3F3F3;
 }
-.site-footer .site-footer__wrapper {
+.site-footer .container .site-footer__wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.site-footer .site-footer__wrapper .site-footer__box {
-  width: 100%;
-  max-width: 513px;
+.site-footer .container .site-footer__wrapper .site-footer__box {
+  width: 513px;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-.site-footer .site-footer__wrapper .site-footer__box nav ul {
+.site-footer .container .site-footer__wrapper .site-footer__box a:hover {
+  opacity: 0.8;
+}
+.site-footer .container .site-footer__wrapper .site-footer__box a:active {
+  opacity: 0.6;
+}
+.site-footer .container .site-footer__wrapper .site-footer__box nav ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
   max-width: 288px;
-  height: 91px;
+  height: 90px;
 }
-.site-footer .site-footer__wrapper .site-footer__box nav ul li {
+.site-footer .container .site-footer__wrapper .site-footer__box nav ul li {
   width: 144px;
 }
-.site-footer .site-footer__wrapper .site-footer__box nav ul li a {
+.site-footer .container .site-footer__wrapper .site-footer__box nav ul li a {
   color: #333;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 500;
 }
-.site-footer .site-footer__wrapper .site-footer__information {
-  width: 100%;
-  max-width: 664px;
+.site-footer .container .site-footer__wrapper .site-footer__box nav ul li a:hover {
+  opacity: 0.8;
+  background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
+}
+.site-footer .container .site-footer__wrapper .site-footer__box nav ul li a:active {
+  background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
+  opacity: 0.6;
+}
+.site-footer .container .site-footer__wrapper .site-footer__information {
+  width: 664px;
   display: flex;
   justify-content: space-between;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__days-box {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box {
   max-width: 150px;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__days-box img {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box img {
   margin-right: 10px;
   margin-bottom: 23px;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__days-box p {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box p {
   width: 120px;
   margin: 0;
   padding: 0;
@@ -1164,7 +1208,7 @@ button:active {
   font-size: 14px;
   font-weight: 500;
 }
-.site-footer .site-footer__wrapper .site-footer__information address {
+.site-footer .container .site-footer__wrapper .site-footer__information address {
   max-width: 182px;
   display: flex;
   align-items: center;
@@ -1174,12 +1218,13 @@ button:active {
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 500;
+  font-style: normal;
 }
-.site-footer .site-footer__wrapper .site-footer__information address img {
+.site-footer .container .site-footer__wrapper .site-footer__information address img {
   margin-right: 10px;
   margin-bottom: 23px;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number {
   width: 100%;
   max-width: 170px;
   display: flex;
@@ -1187,15 +1232,15 @@ button:active {
   margin: 0;
   padding: 0;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number img {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number img {
   margin-right: 10px;
   margin-bottom: 30px;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number div {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div {
   display: flex;
   flex-direction: column;
 }
-.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number div a {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a {
   width: 100%;
   width: 115px;
   margin: 0;
@@ -1205,7 +1250,14 @@ button:active {
   font-size: 14px;
   font-weight: 500;
 }
-.site-footer cite {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a:hover {
+  color: #FFBD54;
+}
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a:active {
+  color: #FFBD54;
+  opacity: 0.6;
+}
+.site-footer .container cite {
   display: block;
   color: #5C5C5C;
   text-align: right;
