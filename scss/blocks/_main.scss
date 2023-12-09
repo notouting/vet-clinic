@@ -163,44 +163,51 @@ main {
             }
 
             .service-content__box-list {
-                display: grid;
-                grid-template-rows: auto;
-                grid-template-columns: auto auto auto auto auto auto;
-                gap: auto;
+                display: flex;
+                flex-wrap: wrap;
                 width: 100%;
                 max-width: 1223px;
-                padding-bottom: 13px;
                 padding: 0;
                 margin-bottom: 14px;
 
-                li {
+
+                .service-content__list-list {
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background-color: #fff;
-                    padding: 33px;
-                    width: 193px;
-                    height: 201px;
-                    border-radius: 5px;
+                    justify-content: space-around;
+                    width: 605x;
+                    margin-top: 14px;
+                    margin-left: auto;
+                    margin-right: auto;
 
-                    h3 {
-                        margin-top: 22px;
-                        text-align: center;
-                        color: $colorPrimary;
-                        font-family: $fontFutura;
-                        font-weight: 500;
-                        font-size: 18px;
-                        line-height: 22px;
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: #fff;
+                        padding: 33px;
+                        width: 193px;
+                        height: 201px;
+                        border-radius: 5px;
 
+                        h3 {
+                            margin-top: 22px;
+                            text-align: center;
+                            color: $colorPrimary;
+                            font-family: $fontFutura;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 22px;
+
+                        }
                     }
-                }
 
-                li:hover {
-                    opacity: 0.8;
-                }
+                    li:hover {
+                        opacity: 0.8;
+                    }
 
-                li:active {
-                    opacity: 0.6;
+                    li:active {
+                        opacity: 0.6;
+                    }
                 }
             }
         }
@@ -224,7 +231,7 @@ main {
         div {
             width: 100%;
             max-width: 492px;
-            margin-right: 70px;
+            padding-right: 70px;
 
 
             h2 {
@@ -247,6 +254,10 @@ main {
 
             div {
                 display: flex;
+                width: 100%;
+                max-width: 447px;
+                padding: 0;
+                justify-content: space-between;
 
 
                 .observe-content__btn-price {
@@ -263,7 +274,7 @@ main {
                     border-radius: 3px;
 
                     .observe-content__btn-img {
-                        margin-right: 8px;
+                        margin-right: 6px;
                     }
 
                 }
@@ -283,7 +294,7 @@ main {
                     border-radius: 3px;
 
                     .observe-content__btn-img {
-                        margin-right: 8px;
+                        margin-right: 6px;
                     }
                 }
             }
@@ -308,7 +319,9 @@ button:active {
     margin-top: 127px;
 
     .subscription-content__box {
+        width: 544px;
         padding-top: 200px;
+        margin-left: 178px;
 
         h2 {
             color: #FFF;
@@ -317,13 +330,11 @@ button:active {
             font-weight: 700;
             line-height: 20px;
             margin-bottom: 32px;
-            margin-left: 178px;
         }
 
         .subscription-content__wrapper {
             display: flex;
             align-items: center;
-            margin-left: 178px;
 
             input {
                 padding: 18px 147px 12px 22px;
@@ -578,9 +589,6 @@ button:active {
 @media only screen and (min-width:768px) and (max-width:1023px) {
 
     // service content
-    .service-content__box-list {
-        grid-template-columns: auto auto auto ;
-    }
 
     // hero content
     .hero-content {
@@ -594,7 +602,13 @@ button:active {
     }
 
     .observe-content__content {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // subsciption content
+    .subscription-content__box {
+        margin-left: 100px;
     }
 
     // news content
