@@ -76,7 +76,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -340,6 +340,7 @@ template {
   font-weight: 700;
   src: url("../fonts/FuturaPT-Bold.woff") format("woff");
 }
+
 @font-face {
   font-display: auto;
   font-family: "Futura PT";
@@ -347,6 +348,7 @@ template {
   font-weight: 400;
   src: url("../fonts/FuturaPT-Book.woff") format("woff");
 }
+
 @font-face {
   font-display: auto;
   font-family: "Futura PT Demi";
@@ -354,6 +356,7 @@ template {
   font-weight: 500;
   src: url("../fonts/FuturaPT-Demi.woff") format("woff");
 }
+
 @font-face {
   font-display: auto;
   font-family: "Futura PT";
@@ -361,6 +364,7 @@ template {
   font-weight: 500;
   src: url("../fonts/FuturaPT-Medium.woff") format("woff");
 }
+
 @font-face {
   font-display: auto;
   font-family: "VAG World Bold";
@@ -368,6 +372,7 @@ template {
   font-weight: 500;
   src: url("../fonts/FuturaPT-Medium.woff") format("woff");
 }
+
 /* GENERAL */
 * {
   box-sizing: border-box;
@@ -439,6 +444,7 @@ a {
 .site-header {
   width: 100%;
 }
+
 .site-header__information {
   height: 39px;
   margin-left: auto;
@@ -447,6 +453,7 @@ a {
   display: flex;
   background-color: #F9F9F9;
 }
+
 .site-header__information__box {
   width: 100%;
   margin: 0;
@@ -455,6 +462,7 @@ a {
   justify-content: space-between;
   font-family: "Futura PT";
 }
+
 .site-header__information__box-address {
   display: flex;
   align-items: center;
@@ -464,13 +472,16 @@ a {
   font-weight: 500;
   font-family: "Futura PT";
 }
+
 .site-header__information__box-address svg {
   margin-right: 9px;
 }
+
 .site-header__information__box-box {
   display: flex;
   align-items: center;
 }
+
 .site-header__information__box-box-link {
   font-family: "Futura PT";
   color: #333333;
@@ -480,18 +491,22 @@ a {
   font-size: 14px;
   font-weight: 500;
 }
+
 .site-header__information__box-box-link svg {
   margin-right: 9px;
 }
+
 .site-header__information__box-box-link:hover {
   color: #FFBD54;
 }
+
 .site-header__information__box__days-box {
   width: 100%;
   max-width: 286px;
   display: flex;
   justify-content: space-between;
 }
+
 .site-header__information__box__days-box-days {
   display: flex;
   align-items: center;
@@ -499,12 +514,15 @@ a {
   font-size: 14px;
   font-weight: 500;
 }
+
 .site-header__information__box__days-box-days svg {
   margin-right: 9px;
 }
+
 .site-header__information__box__days-box .days2 {
   margin-left: 17px;
 }
+
 .site-header__navigation {
   font-family: "Futura PT";
   width: 100%;
@@ -512,6 +530,7 @@ a {
   background-color: #fff;
   display: flex;
 }
+
 .site-header__navigation-wrapper {
   width: 100%;
   max-width: 1340px;
@@ -521,21 +540,26 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .site-header__navigation__logo-link {
   display: flex;
   align-items: center;
   position: relative;
   width: 177.5px;
 }
+
 .site-header__navigation__logo-img {
   position: absolute;
 }
+
 .site-header__navigation__logo-img:hover {
   opacity: 0.8;
 }
+
 .site-header__navigation__logo-img:active {
   opacity: 0.6;
 }
+
 .site-header__navigation__nav {
   width: 100%;
   max-width: 725px;
@@ -543,6 +567,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .site-header__navigation__nav-list {
   width: 100%;
   max-width: 692px;
@@ -552,30 +577,37 @@ a {
   margin: 0;
   padding: 0;
 }
+
 .site-header__navigation__nav-list a:hover {
   opacity: 0.8;
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
+
 .site-header__navigation__nav-list a:active {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
   opacity: 0.6;
 }
+
 .site-header__navigation button {
   background-color: #fff;
   border: none;
   display: flex;
   align-items: center;
 }
+
 .site-header__navigation button p {
   margin: 0;
   padding: 0;
 }
+
 .site-header__navigation button p:hover {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
+
 .site-header__navigation button:hover {
   opacity: 0.8;
 }
+
 .site-header__navigation button:active {
   opacity: 0.6;
 }
@@ -629,10 +661,12 @@ main {
   background-position: calc(50% - 496.5px) -180px, calc(50% + 655px) bottom;
   background-repeat: no-repeat;
 }
+
 .hero-content__box {
   margin-left: calc(50% + 20px);
   padding-top: 145.77px;
 }
+
 .hero-content__box-title {
   width: 100%;
   max-width: 608px;
@@ -642,6 +676,7 @@ main {
   font-weight: 700;
   line-height: 64px;
 }
+
 .hero-content__box-title span {
   color: #78C0DE;
   font-family: "Futura PT";
@@ -649,6 +684,7 @@ main {
   font-weight: 700;
   line-height: 64px;
 }
+
 .hero-content__box-text {
   width: 100%;
   max-width: 495px;
@@ -659,6 +695,7 @@ main {
   line-height: 21px;
   margin: 29px 0 38px 0;
 }
+
 .hero-content__box-btn {
   color: #FFF;
   font-family: "Futura PT";
@@ -669,9 +706,11 @@ main {
   padding: 15px 48px;
   border: none;
 }
+
 .hero-content__box-btn:hover {
   opacity: 0.8;
 }
+
 .hero-content__box-btn:active {
   opacity: 0.6;
 }
@@ -680,6 +719,7 @@ main {
   margin-top: 102px;
   width: 100%;
 }
+
 .quote-content__box {
   display: flex;
   flex-direction: column;
@@ -687,10 +727,12 @@ main {
   margin-inline: auto;
   width: 100%;
 }
+
 .quote-content__box .open-quote {
   margin-bottom: 70px;
   margin-right: 50px;
 }
+
 .quote-content__box q {
   display: flex;
   width: 100%;
@@ -701,15 +743,18 @@ main {
   font-size: 20px;
   font-weight: 400;
 }
+
 .quote-content__box q span {
   width: 753px;
   height: 78px;
   text-align: center;
 }
+
 .quote-content__box .close-qoute {
   margin-left: 50px;
   margin-top: 70px;
 }
+
 .quote-content__box-cite {
   color: #333;
   font-family: "Futura PT";
@@ -726,9 +771,11 @@ main {
   width: 100%;
   margin-top: 0px;
 }
+
 .service-content .container {
   width: 100%;
 }
+
 .service-content .container h2 {
   color: #333333;
   text-align: center;
@@ -738,6 +785,7 @@ main {
   line-height: 54px;
   margin-bottom: 80px;
 }
+
 .service-content .container div {
   width: 100%;
   max-width: 1310px;
@@ -746,6 +794,7 @@ main {
   justify-content: space-between;
   margin: 0 auto;
 }
+
 .service-content .container div .arrow-div {
   display: flex;
   justify-content: center;
@@ -753,13 +802,16 @@ main {
   width: 50px;
   height: 50px;
 }
+
 .service-content .container div .arrow-div:hover {
   background-color: #FFF;
 }
+
 .service-content .container div .arrow-div:active {
   background-color: #FFF;
   opacity: 0.6;
 }
+
 .service-content .container div .service-content__box-list {
   display: flex;
   width: 100%;
@@ -767,6 +819,7 @@ main {
   padding: 0;
   margin-bottom: 14px;
 }
+
 .service-content .container div .service-content__box-list .service-content__list-list {
   display: flex;
   justify-content: space-around;
@@ -775,6 +828,7 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+
 .service-content .container div .service-content__box-list .service-content__list-list li {
   display: flex;
   flex-direction: column;
@@ -785,6 +839,7 @@ main {
   height: 201px;
   border-radius: 5px;
 }
+
 .service-content .container div .service-content__box-list .service-content__list-list li h3 {
   margin-top: 22px;
   text-align: center;
@@ -794,9 +849,11 @@ main {
   font-size: 18px;
   line-height: 22px;
 }
+
 .service-content .container div .service-content__box-list .service-content__list-list li:hover {
   opacity: 0.8;
 }
+
 .service-content .container div .service-content__box-list .service-content__list-list li:active {
   opacity: 0.6;
 }
@@ -805,6 +862,7 @@ main {
 .observe-content {
   width: 100%;
 }
+
 .observe-content__box {
   width: 100%;
   max-width: 1223px;
@@ -815,11 +873,13 @@ main {
   justify-content: space-between;
   background-color: #fff;
 }
+
 .observe-content__box div {
   width: 100%;
   max-width: 492px;
   padding-right: 70px;
 }
+
 .observe-content__box div h2 {
   margin-top: 37px;
   font-family: "Futura PT Demi";
@@ -828,6 +888,7 @@ main {
   line-height: 20px;
   color: #333333;
 }
+
 .observe-content__box div p {
   color: #949494;
   font-family: "Futura PT";
@@ -835,6 +896,7 @@ main {
   font-size: 16px;
   margin: 18px 0 34px 0;
 }
+
 .observe-content__box div div {
   display: flex;
   width: 100%;
@@ -842,6 +904,7 @@ main {
   padding: 0;
   justify-content: space-between;
 }
+
 .observe-content__box div div .observe-content__btn-price {
   display: flex;
   align-items: center;
@@ -855,9 +918,11 @@ main {
   padding: 15px 36px;
   border-radius: 3px;
 }
+
 .observe-content__box div div .observe-content__btn-price .observe-content__btn-img {
   margin-right: 6px;
 }
+
 .observe-content__box div div .observe-content__btn-submit {
   display: flex;
   align-items: center;
@@ -871,6 +936,7 @@ main {
   padding: 15px 36px;
   border-radius: 3px;
 }
+
 .observe-content__box div div .observe-content__btn-submit .observe-content__btn-img {
   margin-right: 6px;
 }
@@ -891,11 +957,13 @@ button:active {
   background-position: calc(50% + 362px) 0px, 0 110px;
   margin-top: 127px;
 }
+
 .subscription-content .subscription-content__box {
   max-width: 900px;
   padding-top: 200px;
   padding-right: 270px;
 }
+
 .subscription-content .subscription-content__box h2 {
   width: 494px;
   color: #FFF;
@@ -905,6 +973,7 @@ button:active {
   line-height: 20px;
   margin-bottom: 32px;
 }
+
 .subscription-content .subscription-content__box .subscription-content__wrapper {
   width: 100%;
   max-width: 544px;
@@ -912,6 +981,7 @@ button:active {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .subscription-content .subscription-content__box .subscription-content__wrapper input {
   width: 335px;
   height: 50px;
@@ -920,6 +990,7 @@ button:active {
   border: none;
   margin-bottom: 30px;
 }
+
 .subscription-content .subscription-content__box .subscription-content__wrapper input::-moz-placeholder {
   color: #949494;
   font-family: "Futura PT";
@@ -928,6 +999,7 @@ button:active {
   line-height: 20px;
   border-radius: 3px;
 }
+
 .subscription-content .subscription-content__box .subscription-content__wrapper input::placeholder {
   color: #949494;
   font-family: "Futura PT";
@@ -936,6 +1008,7 @@ button:active {
   line-height: 20px;
   border-radius: 3px;
 }
+
 .subscription-content .subscription-content__box .subscription-content__wrapper button {
   width: 184px;
   height: 50px;
@@ -959,6 +1032,7 @@ button:active {
   line-height: 20px;
   margin: 165px 0 95px 0;
 }
+
 .news-content .news-content__list {
   width: 100%;
   display: flex;
@@ -966,13 +1040,16 @@ button:active {
   justify-content: space-between;
   padding: 0;
 }
+
 .news-content .news-content__list .news-content__item {
   max-width: 305px;
   height: 435px;
 }
+
 .news-content .news-content__list .news-content__item div {
   padding: 30px;
 }
+
 .news-content .news-content__list .news-content__item div h3 {
   color: #000;
   font-family: "Futura PT";
@@ -980,6 +1057,7 @@ button:active {
   font-weight: 700;
   line-height: 25px;
 }
+
 .news-content .news-content__list .news-content__item div p {
   color: #949494;
   font-family: "Futura PT";
@@ -987,25 +1065,31 @@ button:active {
   font-weight: 400;
   line-height: 20px;
 }
+
 .news-content .news-content__list .news-content__item div span {
   color: #949494;
   font-family: "Futura PT";
   font-size: 14px;
   font-weight: 500;
 }
+
 .news-content .news-content__list .news-content__item div a:hover {
   opacity: 0.8;
 }
+
 .news-content .news-content__list .news-content__item div a:active {
   opacity: 0.6;
 }
+
 .news-content .news-content__list .news-content__item-big {
   display: flex;
   width: 640px;
 }
+
 .news-content .news-content__list .news-content__item-big div {
   padding: 30px;
 }
+
 .news-content .news-content__list .news-content__item-big div h3 {
   color: #000;
   font-family: "Futura PT";
@@ -1013,6 +1097,7 @@ button:active {
   font-weight: 700;
   line-height: 25px;
 }
+
 .news-content .news-content__list .news-content__item-big div p {
   color: #949494;
   font-family: "Futura PT";
@@ -1020,6 +1105,7 @@ button:active {
   font-weight: 400;
   line-height: 20px;
 }
+
 .news-content .news-content__list .news-content__item-big div pre {
   color: #3D9CEA;
   font-family: "Futura PT";
@@ -1027,15 +1113,18 @@ button:active {
   font-weight: 400;
   line-height: 22px;
 }
+
 .news-content .news-content__list .news-content__item-big div span {
   color: #949494;
   font-family: "Futura PT";
   font-size: 14px;
   font-weight: 500;
 }
+
 .news-content .news-content__list .news-content__item-big div a:hover {
   opacity: 0.8;
 }
+
 .news-content .news-content__list .news-content__item-big div a:active {
   opacity: 0.6;
 }
@@ -1044,17 +1133,20 @@ button:active {
   margin-top: 265px;
   width: 100%;
 }
+
 .feedback-content .feedback-container {
   width: 100%;
   max-width: 1463px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box {
   width: 990px;
   background: url(../images/feedback-bg.png), no-repeat;
@@ -1065,12 +1157,14 @@ button:active {
   padding-left: 166px;
   padding-bottom: 74px;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box h2 {
   color: #FFF;
   font-family: "Futura PT";
   font-size: 48px;
   font-weight: 700;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box p {
   color: #949494;
   font-family: "Futura PT";
@@ -1080,14 +1174,17 @@ button:active {
   max-width: 339px;
   margin-bottom: 30px;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form {
   width: 100%;
   max-width: 375px;
   height: 373px;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label {
   width: 100%;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input {
   width: 100%;
   max-width: 375px;
@@ -1095,18 +1192,23 @@ button:active {
   border: none;
   background-color: #FFF;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:not(:focus):not(:-moz-placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:not(:focus):not(:placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:valid {
   border: 2px solid #90EE90;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label .feedback-content__input2 {
   margin: 14px 0;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label textarea {
   width: 100%;
   max-width: 375px;
@@ -1115,12 +1217,14 @@ button:active {
   height: 165px;
   padding: 22px 0 0 17px;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::-moz-placeholder {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 400;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::placeholder,
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label textarea {
   color: #949494;
@@ -1128,12 +1232,15 @@ button:active {
   font-size: 16px;
   font-weight: 400;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::-moz-placeholder {
   padding-left: 17px;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::placeholder {
   padding-left: 17px;
 }
+
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form button {
   margin-top: 25px;
   background-color: #FFBD54;
@@ -1145,6 +1252,7 @@ button:active {
   font-size: 16px;
   font-weight: 500;
 }
+
 .feedback-content .feedback-container .feedback-content__map {
   width: 462px;
   margin-left: auto;
@@ -1157,12 +1265,14 @@ button:active {
   margin-top: 247px;
   background-color: #F3F3F3;
 }
+
 .site-footer .container .site-footer__wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box {
   margin-left: auto;
   margin-right: auto;
@@ -1171,12 +1281,15 @@ button:active {
   justify-content: space-between;
   margin-top: 30px;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box a:hover {
   opacity: 0.8;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box a:active {
   opacity: 0.6;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -1185,23 +1298,28 @@ button:active {
   max-width: 288px;
   height: 90px;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li {
   width: 144px;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li a {
   color: #333;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 500;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li a:hover {
   opacity: 0.8;
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li a:active {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
   opacity: 0.6;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information {
   margin-left: auto;
   margin-right: auto;
@@ -1209,6 +1327,7 @@ button:active {
   display: flex;
   justify-content: space-between;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box {
   max-width: 150px;
   display: flex;
@@ -1216,10 +1335,12 @@ button:active {
   margin: 0;
   padding: 0;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box img {
   margin-right: 10px;
   margin-bottom: 23px;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box p {
   width: 120px;
   margin: 0;
@@ -1229,6 +1350,7 @@ button:active {
   font-size: 14px;
   font-weight: 500;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information address {
   max-width: 182px;
   display: flex;
@@ -1241,10 +1363,12 @@ button:active {
   font-weight: 500;
   font-style: normal;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information address img {
   margin-right: 10px;
   margin-bottom: 23px;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number {
   width: 100%;
   max-width: 170px;
@@ -1253,14 +1377,17 @@ button:active {
   margin: 0;
   padding: 0;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number img {
   margin-right: 10px;
   margin-bottom: 30px;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div {
   display: flex;
   flex-direction: column;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a {
   width: 100%;
   width: 115px;
@@ -1271,13 +1398,16 @@ button:active {
   font-size: 14px;
   font-weight: 500;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a:hover {
   color: #FFBD54;
 }
+
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a:active {
   color: #FFBD54;
   opacity: 0.6;
 }
+
 .site-footer .container cite {
   display: block;
   color: #5C5C5C;
@@ -1301,39 +1431,50 @@ button:active {
     margin-left: 40px;
     flex-wrap: wrap;
   }
+
   .site-header__navigation {
     margin-top: 50px;
   }
+
   .phone-wrapper {
     width: 132px;
   }
+
   .service-content__box-list {
     flex-wrap: wrap;
   }
+
   .hero-content {
     background-size: 500px 500px, 0;
     background-position: calc(50% + 230px) -90px, 0px;
   }
+
   .hero-content__box {
     margin-left: 20%;
   }
+
   .observe-content__img {
     margin: 0 auto;
   }
+
   .observe-content__content {
     margin-left: auto;
     margin-right: auto;
   }
+
   .subscription-content__box {
     margin-left: 50px;
   }
+
   .news-content__list {
     flex-wrap: wrap;
   }
+
   .news-content__item {
     margin-left: auto;
     margin-right: auto;
   }
+
   .news-content__item-big {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1341,72 +1482,95 @@ button:active {
     margin-right: auto;
     flex-wrap: wrap;
   }
+
   .feedback-container {
     flex-wrap: wrap;
   }
+
   .feedback-content__map {
     width: 500px;
     height: 300px;
     margin-bottom: 40px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .site-header__navigation__nav-list {
     margin-left: 40px;
   }
+
   .phone-wrapper {
     width: 132px;
   }
+
   .service-content__box-list {
     flex-wrap: wrap;
   }
+
   .hero-content {
     background-size: 500px 500px, 0;
     background-position: calc(50% - 230px), 0;
   }
+
   .observe-content__img {
     margin: 0 auto;
   }
+
   .observe-content__content {
     margin-left: auto;
     margin-right: auto;
   }
+
   .subscription-content__box {
     margin-left: 80px;
   }
+
   .news-content__list {
     flex-wrap: wrap;
   }
+
   .news-content__item {
     margin-left: auto;
     margin-right: auto;
   }
+
   .news-content__item-big {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .feedback-container {
     flex-wrap: wrap;
   }
+
   .feedback-content__map {
     width: 500px;
     height: 300px;
     margin-bottom: 40px;
   }
+
   .subscription-content__wrapper {
     flex-wrap: wrap;
   }
 }
+
 @media only screen and (min-width: 1100px) {
   .observe-content__img {
     margin: 0 auto;
   }
+
   .observe-content__content {
     margin: 0 auto;
   }
+
   .subscription-content__box {
     margin-left: 178px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
+* {
+  border: 1px solid blue;
+}
