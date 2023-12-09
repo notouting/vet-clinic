@@ -1103,6 +1103,120 @@ button:active {
   font-weight: 500;
 }
 
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  margin-top: 247px;
+  background-color: #F3F3F3;
+}
+.site-footer .site-footer__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.site-footer .site-footer__wrapper .site-footer__box {
+  width: 100%;
+  max-width: 513px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.site-footer .site-footer__wrapper .site-footer__box nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  max-width: 288px;
+  height: 91px;
+}
+.site-footer .site-footer__wrapper .site-footer__box nav ul li {
+  width: 144px;
+}
+.site-footer .site-footer__wrapper .site-footer__box nav ul li a {
+  color: #333;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+}
+.site-footer .site-footer__wrapper .site-footer__information {
+  width: 100%;
+  max-width: 664px;
+  display: flex;
+  justify-content: space-between;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__days-box {
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__days-box img {
+  margin-right: 10px;
+  margin-bottom: 23px;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__days-box p {
+  width: 120px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Futura PT";
+  font-size: 14px;
+  font-weight: 500;
+}
+.site-footer .site-footer__wrapper .site-footer__information address {
+  max-width: 182px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+}
+.site-footer .site-footer__wrapper .site-footer__information address img {
+  margin-right: 10px;
+  margin-bottom: 23px;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number {
+  width: 100%;
+  max-width: 170px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number img {
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number div {
+  display: flex;
+  flex-direction: column;
+}
+.site-footer .site-footer__wrapper .site-footer__information .site-footer__phone-number div a {
+  width: 100%;
+  width: 115px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Futura PT";
+  font-size: 14px;
+  font-weight: 500;
+}
+.site-footer cite {
+  display: block;
+  color: #5C5C5C;
+  text-align: right;
+  font-family: "Futura PT";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: auto;
+}
+
 * {
   padding: 0;
   margin: 0;
