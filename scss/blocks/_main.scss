@@ -164,7 +164,6 @@ main {
 
             .service-content__box-list {
                 display: flex;
-                flex-wrap: wrap;
                 width: 100%;
                 max-width: 1223px;
                 padding: 0;
@@ -319,11 +318,12 @@ button:active {
     margin-top: 127px;
 
     .subscription-content__box {
-        width: 544px;
+        max-width: 900px;
         padding-top: 200px;
-        margin-left: 178px;
+        padding-right: 270px;
 
         h2 {
+            width: 494px;
             color: #FFF;
             font-family: $fontFutura;
             font-size: 48px;
@@ -333,13 +333,19 @@ button:active {
         }
 
         .subscription-content__wrapper {
+            width: 100%;
+            max-width: 544px;
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
             input {
+                width: 335px;
+                height: 50px;
                 padding: 18px 147px 12px 22px;
                 background-color: #FFF;
                 border: none;
+                margin-bottom: 30px;
             }
 
             input::placeholder {
@@ -353,6 +359,8 @@ button:active {
             }
 
             button {
+                width: 184px;
+                height: 50px;
                 background-color: $colorPrimary;
                 color: #FFF;
                 font-family: $fontFutura;
@@ -361,7 +369,6 @@ button:active {
                 padding: 14px 51px;
                 border-radius: 3px;
                 border: none;
-                margin-left: 21px;
             }
         }
     }
@@ -429,7 +436,6 @@ button:active {
         .news-content__item-big {
             display: flex;
             width: 640px;
-            height: 435px;
 
             div {
                 padding: 30px;
@@ -484,147 +490,118 @@ button:active {
     .feedback-container {
         width: 100%;
         max-width: 1463px;
-        display: flex;
         margin-left: auto;
         margin-right: auto;
 
-        .feedback-content__box {
-            width: 100%;
-            max-width: 990px;
-            background: url(../images/feedback-bg.png), no-repeat;
-            background-color: #333;
-            padding-top: 62px;
-            padding-left: 166px;
+        .feedback-content__wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
-            h2 {
-                color: #FFF;
-                font-family: $fontFutura;
-                font-size: 48px;
-                font-weight: 700;
-            }
+            .feedback-content__box {
+                width: 990px;
+                background: url(../images/feedback-bg.png), no-repeat;
+                background-color: #333;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 62px;
+                padding-left: 166px;
+                padding-bottom: 74px;
 
-            p {
-                color: #949494;
-                font-family: $fontFutura;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 20px;
-                max-width: 339px;
-                margin-bottom: 30px;
-            }
-
-            form {
-                width: 100%;
-                max-width: 375px;
-                height: 373px;
-
-
-                label {
-                    width: 100%;
-
-                    input {
-                        width: 100%;
-                        max-width: 375px;
-                        height: 50px;
-                        border: none;
-                        background-color: #FFF;
-                    }
-
-                    input:not(:focus):not(:placeholder-shown):invalid {
-                        border: 2px solid #FF6347;
-                    }
-
-                    input: {
-                        border: 2px solid #90EE90;
-                    }
-
-                    .feedback-content__input2 {
-                        margin: 14px 0;
-                    }
-
-                    textarea {
-                        width: 100%;
-                        max-width: 375px;
-                        border: none;
-                        background-color: #FFF;
-                        height: 165px;
-                        padding: 22px 0 0 17px;
-
-
-                    }
-
-                    input::placeholder,
-                    textarea {
-                        color: #949494;
-                        font-family: $fontFutura;
-                        font-size: 16px;
-                        font-weight: 400;
-                    }
-
-                    input::placeholder {
-                        padding-left: 17px;
-                    }
-
-
-                }
-
-                button {
-                    margin-top: 25px;
-                    background-color: $colorSecondary;
-                    border: none;
-                    border-radius: 1px;
-                    padding: 15px 49px;
+                h2 {
                     color: #FFF;
                     font-family: $fontFutura;
+                    font-size: 48px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: #949494;
+                    font-family: $fontFutura;
                     font-size: 16px;
-                    font-weight: 500;
+                    font-weight: 400;
+                    line-height: 20px;
+                    max-width: 339px;
+                    margin-bottom: 30px;
+                }
+
+                form {
+                    width: 100%;
+                    max-width: 375px;
+                    height: 373px;
+
+
+                    label {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                            max-width: 375px;
+                            height: 50px;
+                            border: none;
+                            background-color: #FFF;
+                        }
+
+                        input:not(:focus):not(:placeholder-shown):invalid {
+                            border: 2px solid #FF6347;
+                        }
+
+                        input:valid{
+                            border: 2px solid #90EE90;
+                        }
+
+                        .feedback-content__input2 {
+                            margin: 14px 0;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            max-width: 375px;
+                            border: none;
+                            background-color: #FFF;
+                            height: 165px;
+                            padding: 22px 0 0 17px;
+
+
+                        }
+
+                        input::placeholder,
+                        textarea {
+                            color: #949494;
+                            font-family: $fontFutura;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+
+                        input::placeholder {
+                            padding-left: 17px;
+                        }
+
+
+                    }
+
+                    button {
+                        margin-top: 25px;
+                        background-color: $colorSecondary;
+                        border: none;
+                        border-radius: 1px;
+                        padding: 15px 49px;
+                        color: #FFF;
+                        font-family: $fontFutura;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
                 }
             }
         }
-    }
-}
 
-@media only screen and (min-width:350px) and (max-width:767px) {}
 
-@media only screen and (min-width:768px) and (max-width:1023px) {
 
-    // service content
-
-    // hero content
-    .hero-content {
-        background-size: 500px 500px, 0;
-        background-position: calc(50% - 230px), 0;
-    }
-
-    // observe content
-    .observe-content__img {
-        margin: 0 auto;
-    }
-
-    .observe-content__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    // subsciption content
-    .subscription-content__box {
-        margin-left: 100px;
-    }
-
-    // news content
-    .news-content__list {
-        flex-wrap: wrap;
-    }
-}
-
-@media only screen and (min-width:1024px) {
-
-    // observe content
-    .observe-content__img {
-        margin: 0 auto;
-    }
-
-    .observe-content__content {
-        margin: 0 auto;
+        .feedback-content__map {
+            width: 462px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
     }
 }

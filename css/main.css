@@ -467,6 +467,10 @@ a {
 .site-header__information__box-address svg {
   margin-right: 9px;
 }
+.site-header__information__box-box {
+  display: flex;
+  align-items: center;
+}
 .site-header__information__box-box-link {
   font-family: "Futura PT";
   color: #333333;
@@ -601,6 +605,16 @@ a {
 
 .site-header__information__box-link:active {
   opacity: 0.6;
+}
+
+.phone-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-header__information__link-box {
+  display: flex;
+  align-items: center;
 }
 
 /* HERO SECTION */
@@ -748,7 +762,6 @@ main {
 }
 .service-content .container div .service-content__box-list {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 1223px;
   padding: 0;
@@ -879,11 +892,12 @@ button:active {
   margin-top: 127px;
 }
 .subscription-content .subscription-content__box {
-  width: 544px;
+  max-width: 900px;
   padding-top: 200px;
-  margin-left: 178px;
+  padding-right: 270px;
 }
 .subscription-content .subscription-content__box h2 {
+  width: 494px;
   color: #FFF;
   font-family: "Futura PT";
   font-size: 48px;
@@ -892,13 +906,19 @@ button:active {
   margin-bottom: 32px;
 }
 .subscription-content .subscription-content__box .subscription-content__wrapper {
+  width: 100%;
+  max-width: 544px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .subscription-content .subscription-content__box .subscription-content__wrapper input {
+  width: 335px;
+  height: 50px;
   padding: 18px 147px 12px 22px;
   background-color: #FFF;
   border: none;
+  margin-bottom: 30px;
 }
 .subscription-content .subscription-content__box .subscription-content__wrapper input::-moz-placeholder {
   color: #949494;
@@ -917,6 +937,8 @@ button:active {
   border-radius: 3px;
 }
 .subscription-content .subscription-content__box .subscription-content__wrapper button {
+  width: 184px;
+  height: 50px;
   background-color: #333333;
   color: #FFF;
   font-family: "Futura PT";
@@ -925,7 +947,6 @@ button:active {
   padding: 14px 51px;
   border-radius: 3px;
   border: none;
-  margin-left: 21px;
 }
 
 /* NEWS SECTION */
@@ -981,7 +1002,6 @@ button:active {
 .news-content .news-content__list .news-content__item-big {
   display: flex;
   width: 640px;
-  height: 435px;
 }
 .news-content .news-content__list .news-content__item-big div {
   padding: 30px;
@@ -1027,25 +1047,31 @@ button:active {
 .feedback-content .feedback-container {
   width: 100%;
   max-width: 1463px;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
 }
-.feedback-content .feedback-container .feedback-content__box {
-  width: 100%;
-  max-width: 990px;
+.feedback-content .feedback-container .feedback-content__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box {
+  width: 990px;
   background: url(../images/feedback-bg.png), no-repeat;
   background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 62px;
   padding-left: 166px;
+  padding-bottom: 74px;
 }
-.feedback-content .feedback-container .feedback-content__box h2 {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box h2 {
   color: #FFF;
   font-family: "Futura PT";
   font-size: 48px;
   font-weight: 700;
 }
-.feedback-content .feedback-container .feedback-content__box p {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box p {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
@@ -1054,32 +1080,34 @@ button:active {
   max-width: 339px;
   margin-bottom: 30px;
 }
-.feedback-content .feedback-container .feedback-content__box form {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form {
   width: 100%;
   max-width: 375px;
   height: 373px;
 }
-.feedback-content .feedback-container .feedback-content__box form label {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label {
   width: 100%;
-  input-border: 2px solid #90EE90;
 }
-.feedback-content .feedback-container .feedback-content__box form label input {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input {
   width: 100%;
   max-width: 375px;
   height: 50px;
   border: none;
   background-color: #FFF;
 }
-.feedback-content .feedback-container .feedback-content__box form label input:not(:focus):not(:-moz-placeholder-shown):invalid {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:not(:focus):not(:-moz-placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
-.feedback-content .feedback-container .feedback-content__box form label input:not(:focus):not(:placeholder-shown):invalid {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:not(:focus):not(:placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
-.feedback-content .feedback-container .feedback-content__box form label .feedback-content__input2 {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:valid {
+  border: 2px solid #90EE90;
+}
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label .feedback-content__input2 {
   margin: 14px 0;
 }
-.feedback-content .feedback-container .feedback-content__box form label textarea {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label textarea {
   width: 100%;
   max-width: 375px;
   border: none;
@@ -1087,26 +1115,26 @@ button:active {
   height: 165px;
   padding: 22px 0 0 17px;
 }
-.feedback-content .feedback-container .feedback-content__box form label input::-moz-placeholder {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::-moz-placeholder {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 400;
 }
-.feedback-content .feedback-container .feedback-content__box form label input::placeholder,
-.feedback-content .feedback-container .feedback-content__box form label textarea {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::placeholder,
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label textarea {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 400;
 }
-.feedback-content .feedback-container .feedback-content__box form label input::-moz-placeholder {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::-moz-placeholder {
   padding-left: 17px;
 }
-.feedback-content .feedback-container .feedback-content__box form label input::placeholder {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::placeholder {
   padding-left: 17px;
 }
-.feedback-content .feedback-container .feedback-content__box form button {
+.feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form button {
   margin-top: 25px;
   background-color: #FFBD54;
   border: none;
@@ -1117,34 +1145,12 @@ button:active {
   font-size: 16px;
   font-weight: 500;
 }
+.feedback-content .feedback-container .feedback-content__map {
+  width: 462px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero-content {
-    background-size: 500px 500px, 0;
-    background-position: calc(50% - 230px), 0;
-  }
-  .observe-content__img {
-    margin: 0 auto;
-  }
-  .observe-content__content {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .subscription-content__box {
-    margin-left: 100px;
-  }
-  .news-content__list {
-    flex-wrap: wrap;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .observe-content__img {
-    margin: 0 auto;
-  }
-  .observe-content__content {
-    margin: 0 auto;
-  }
-}
 /* FOOTER */
 .site-footer {
   width: 100%;
@@ -1158,6 +1164,8 @@ button:active {
   flex-wrap: wrap;
 }
 .site-footer .container .site-footer__wrapper .site-footer__box {
+  margin-left: auto;
+  margin-right: auto;
   width: 513px;
   display: flex;
   justify-content: space-between;
@@ -1195,6 +1203,8 @@ button:active {
   opacity: 0.6;
 }
 .site-footer .container .site-footer__wrapper .site-footer__information {
+  margin-left: auto;
+  margin-right: auto;
   width: 664px;
   display: flex;
   justify-content: space-between;
@@ -1283,4 +1293,120 @@ button:active {
 * {
   padding: 0;
   margin: 0;
+}
+
+/* MEDIA */
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+  .site-header__navigation__nav-list {
+    margin-left: 40px;
+    flex-wrap: wrap;
+  }
+  .site-header__navigation {
+    margin-top: 50px;
+  }
+  .phone-wrapper {
+    width: 132px;
+  }
+  .service-content__box-list {
+    flex-wrap: wrap;
+  }
+  .hero-content {
+    background-size: 500px 500px, 0;
+    background-position: calc(50% + 230px) -90px, 0px;
+  }
+  .hero-content__box {
+    margin-left: 20%;
+  }
+  .observe-content__img {
+    margin: 0 auto;
+  }
+  .observe-content__content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .subscription-content__box {
+    margin-left: 50px;
+  }
+  .news-content__list {
+    flex-wrap: wrap;
+  }
+  .news-content__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .news-content__item-big {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+  .feedback-container {
+    flex-wrap: wrap;
+  }
+  .feedback-content__map {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .site-header__navigation__nav-list {
+    margin-left: 40px;
+  }
+  .phone-wrapper {
+    width: 132px;
+  }
+  .service-content__box-list {
+    flex-wrap: wrap;
+  }
+  .hero-content {
+    background-size: 500px 500px, 0;
+    background-position: calc(50% - 230px), 0;
+  }
+  .observe-content__img {
+    margin: 0 auto;
+  }
+  .observe-content__content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .subscription-content__box {
+    margin-left: 80px;
+  }
+  .news-content__list {
+    flex-wrap: wrap;
+  }
+  .news-content__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .news-content__item-big {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .feedback-container {
+    flex-wrap: wrap;
+  }
+  .feedback-content__map {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  .subscription-content__wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .observe-content__img {
+    margin: 0 auto;
+  }
+  .observe-content__content {
+    margin: 0 auto;
+  }
+  .subscription-content__box {
+    margin-left: 178px;
+  }
 }/*# sourceMappingURL=main.css.map */
