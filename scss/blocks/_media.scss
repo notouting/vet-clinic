@@ -6,13 +6,13 @@
         margin-left: 40px;
         flex-wrap: wrap;
     }
-    .site-header__navigation{
-        margin-top: 50px;
+    .site-header__information{
+        height: 80px;
     }
 
 
     .phone-wrapper {
-        width: 132px;
+        width: 140px;
     }
 
     // service content
@@ -80,9 +80,11 @@
     .site-header__navigation__nav-list {
         margin-left: 40px;
     }
-
+    .site-header__information{
+        height: 80px;
+    }
     .phone-wrapper {
-        width: 132px;
+        width: 140px;
     }
 
     // service content
@@ -133,11 +135,6 @@
         flex-wrap: wrap;
     }
 
-    .feedback-content__map {
-        width: 500px;
-        height: 300px;
-        margin-bottom: 40px;
-    }
     // subscription-content
     .subscription-content__wrapper{
         flex-wrap: wrap;

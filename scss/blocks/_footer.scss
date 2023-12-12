@@ -31,12 +31,14 @@
                     ul {
                         display: flex;
                         flex-wrap: wrap;
+                        justify-content: space-between;
                         flex-direction: column;
                         width: 100%;
                         max-width: 288px;
                         height: 90px;
 
                         li {
+                            height: 30px;
                             width: 144px;
 
                             a {
@@ -66,19 +68,14 @@
                 margin-right: auto;
                 width: 664px;
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
 
                 .site-footer__days-box {
                     max-width: 150px;
                     display: flex;
-                    align-items: center;
                     margin: 0;
                     padding: 0;
-
-                    img {
-                        margin-right: 10px;
-                        margin-bottom: 23px;
-                    }
 
                     p {
                         width: 120px;
@@ -90,11 +87,14 @@
                         font-weight: 500;
                     }
                 }
+                .site-footer__days-box::before{
+                    content: url(../icons/schedule.svg);
+                    margin-right: 14px;
+                }
 
                 address {
                     max-width: 182px;
                     display: flex;
-                    align-items: center;
                     margin: 0;
                     padding: 0;
                     color: #333;
@@ -110,12 +110,15 @@
                     }
 
                 }
+                address::before{
+                    content: url(../icons/home.svg);
+                    margin-right: 9px;
+                }
 
                 .site-footer__phone-number {
                     width: 100%;
                     max-width: 170px;
                     display: flex;
-                    align-items: center;
                     margin: 0;
                     padding: 0;
 
@@ -150,11 +153,15 @@
                     }
 
                 }
+                .site-footer__phone-number::before{
+                    content: url(../icons/phone.svg);
+                    margin-right: 9px;
+                }
             }
 
         }
 
-        cite {
+        span {
             display: block;
             color: #5C5C5C;
             text-align: right;

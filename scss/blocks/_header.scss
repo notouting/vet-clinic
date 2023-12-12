@@ -26,17 +26,20 @@
                 font-style: normal;
                 font-weight: 500;
                 font-family: $fontFutura;
-
-                svg {
-                    margin-right: 9px;
-                }
             }
 
-            &-box {
+            &-address::before {
+                content: url(../icons/home.svg);
+                margin-right: 9px;
+                width: 14px;
+                height: 13px;
+            }
+
+            .site-header__information__link-box {
                 display: flex;
                 align-items: center;
 
-                &-link {
+                .site-header__information__box-link {
                     font-family: $fontFutura;
                     color: $colorPrimary;
                     display: flex;
@@ -44,24 +47,37 @@
                     color: #333;
                     font-size: 14px;
                     font-weight: 500;
-
-
-                    svg {
-                        margin-right: 9px;
-                    }
                 }
 
-                &-link:hover {
+                // .site-header__information__box-link:not(:last-child){
+                //     margin-right: 9px;
+                // }
+
+                .site-header__information__box-link:hover {
                     color: $colorSecondary;
+                }
+
+                .site-header__information__box-link:not(:first-child)::before {
+                    content: url(../icons/circle.svg);
+                    margin: 6px 9px;
+                    width: 4px;
+                }
+
+                .site-header__information__box-link:first-child::before {
+                    content: url(../icons/phone.svg);
+                    margin-right: 9px;
+                    width: 13px;
+                    height: 13px;
                 }
 
             }
 
-            &__days-box {
+            .site-header__information__days-box {
                 width: 100%;
                 max-width: 286px;
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
 
                 &-days {
                     display: flex;
@@ -69,15 +85,23 @@
                     color: #333;
                     font-size: 14px;
                     font-weight: 500;
+                }
 
-                    svg {
-                        margin-right: 9px;
-                    }
+                .days1 {
+                    width: 118px;
+                    margin-right: 17px;
                 }
 
                 .days2 {
-                    margin-left: 17px;
+                    width: 116px;
                 }
+            }
+
+            .site-header__information__days-box::before {
+                content: url(../icons/schedule.svg);
+                width: 14px;
+                height: 14px;
+                margin-right: 7px;
             }
 
         }
@@ -146,6 +170,13 @@
                     background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
                     opacity: 0.6;
                 }
+
+                li:first-child::before {
+                    content: url(../icons/fish.svg);
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 12px;
+                }
             }
         }
 
@@ -156,14 +187,25 @@
             align-items: center;
 
 
-            p {
+            span {
+                width: 97px;
                 margin: 0;
                 padding: 0;
+                color: #333;
+                text-align: right;
+                font-family: $fontFutura;
+                font-size: 16px;
+                font-weight: 500;
             }
 
             p:hover {
                 background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
             }
+        }
+
+        button::before{
+            content: url(../icons/lapa.svg);
+            margin-right: 4px;
         }
 
         button:hover {
@@ -179,13 +221,13 @@
 }
 
 .site-header__information__box-link,
-.site-header__information__box-days{
-font-family: $fontFutura;
-color: #333;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+.site-header__information__box-days {
+    font-family: $fontFutura;
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .site-header__navigation__nav-link {
@@ -204,11 +246,13 @@ line-height: normal;
 .site-header__information__box-link:active {
     opacity: 0.6;
 }
-.phone-wrapper{
+
+.phone-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
-.site-header__information__link-box{
+
+.site-header__information__link-box {
     display: flex;
     align-items: center;
 }

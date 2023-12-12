@@ -169,43 +169,94 @@ main {
                 padding: 0;
                 margin-bottom: 14px;
 
+                .service-content__list-bitem {
+                    width: 100%;
 
-                .service-content__list-list {
-                    display: flex;
-                    justify-content: space-around;
-                    width: 605x;
-                    margin-top: 14px;
-                    margin-left: auto;
-                    margin-right: auto;
-
-                    li {
+                    .service-content__list-list {
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        background-color: #fff;
-                        padding: 33px;
-                        width: 193px;
-                        height: 201px;
-                        border-radius: 5px;
+                        justify-content: space-around;
+                        width: 605x;
+                        margin-top: 14px;
+                        margin-left: auto;
+                        margin-right: auto;
 
-                        h3 {
-                            margin-top: 22px;
-                            text-align: center;
-                            color: $colorPrimary;
-                            font-family: $fontFutura;
-                            font-weight: 500;
-                            font-size: 18px;
-                            line-height: 22px;
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            background-color: #fff;
+                            padding: 33px;
+                            width: 193px;
+                            height: 201px;
+                            border-radius: 5px;
 
+                            h3 {
+                                margin-top: 22px;
+                                text-align: center;
+                                color: $colorPrimary;
+                                font-family: $fontFutura;
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 22px;
+
+                            }
+                        }
+
+                        li:hover {
+                            opacity: 0.8;
+                        }
+
+                        li:active {
+                            opacity: 0.6;
                         }
                     }
 
-                    li:hover {
-                        opacity: 0.8;
+                    .list1 {
+                        li:nth-child(1){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li:nth-child(1)::before{
+                            content: url(../icons/service-doctor.svg);
+                        }
+                        li:nth-child(2){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li:nth-child(2)::before{
+                            content: url(../icons/service-nurse-dog.svg);
+                        }
+                        li:nth-child(3){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li:nth-child(3)::before{
+                            content: url(../icons/service-dog-capelnitsa.svg);
+                        }
                     }
 
-                    li:active {
-                        opacity: 0.6;
+                    .list2 {
+                        li:nth-child(1){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li:nth-child(1)::before{
+                            content: url(../icons/service-dog-soch.svg);
+                        }
+                        li:nth-child(2){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li:nth-child(2)::before{
+                            content: url(../icons/service-microscope.svg);
+                        }
+                        li:nth-child(3){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        li:nth-child(3)::before{
+                            content: url(../icons/service-dog-cat.svg);
+                        }
                     }
                 }
             }
@@ -251,50 +302,66 @@ main {
                 margin: 18px 0 34px 0;
             }
 
-            div {
+            .observe-content__btn-div {
+                width: 447px;
                 display: flex;
-                width: 100%;
-                max-width: 447px;
                 padding: 0;
                 justify-content: space-between;
 
 
                 .observe-content__btn-price {
+                    width: 185px;
+                    height: 50px;
                     display: flex;
                     align-items: center;
                     background-color: $colorSecondary;
-                    color: #fff;
-                    margin-right: 8px;
-                    font-family: $fontFutura;
-                    font-size: 16px;
-                    font-weight: 500;
                     border: none;
                     padding: 15px 36px;
                     border-radius: 3px;
 
-                    .observe-content__btn-img {
-                        margin-right: 6px;
+                    span {
+                        color: #fff;
+                        font-family: $fontFutura;
+                        font-size: 16px;
+                        font-weight: 500;
+                        width: 86px;
+                        height: 21px;
+                        margin: 0;
+                        padding: 0;
                     }
+                }
 
+                .observe-content__btn-price::before {
+                    content: url(../icons/observe-money.svg);
+                    margin-right: 9px;
                 }
 
 
                 .observe-content__btn-submit {
+                    width: 241px;
+                    height: 50px;
                     display: flex;
                     align-items: center;
                     background-color: $colorPrimary;
-                    color: #fff;
-                    font-family: $fontFutura;
-                    font-size: 16px;
-                    font-weight: 500;
-                    margin-left: 19px;
                     border: none;
                     padding: 15px 36px;
                     border-radius: 3px;
 
-                    .observe-content__btn-img {
-                        margin-right: 6px;
+                    span {
+                        color: #fff;
+                        font-family: $fontFutura;
+                        font-size: 16px;
+                        font-weight: 500;
+                        width: 140px;
+                        height: 21px;
+                        margin: 0;
+                        padding: 0;
                     }
+                }
+
+                .observe-content__btn-submit::before {
+                    content: url(../icons/observe-document.svg);
+                    margin-right: 9px;
                 }
             }
         }
@@ -394,6 +461,7 @@ button:active {
         padding: 0;
 
         .news-content__item {
+            width: 100%;
             max-width: 305px;
             height: 435px;
 
@@ -414,13 +482,26 @@ button:active {
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 20px;
+                    margin: 13px 0 28px 0;
                 }
 
-                span {
+                time {
+                    width: 71px;
                     color: #949494;
                     font-family: $fontFutura;
                     font-size: 14px;
                     font-weight: 500;
+                    text-align: right;
+                    margin-left: 175px;
+                }
+
+                a {
+                    color: $colorPrimary;
+                    font-family: $fontFutura;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
                 }
 
                 a:hover {
@@ -430,6 +511,11 @@ button:active {
                 a:active {
                     opacity: 0.6;
                 }
+
+                a::before {
+                    content: url(../icons/lapa.svg);
+                    margin-right: 4px;
+                }
             }
         }
 
@@ -437,10 +523,15 @@ button:active {
             display: flex;
             width: 640px;
 
+            img {
+                margin: 0 auto;
+            }
+
             div {
                 padding: 30px;
 
                 h3 {
+                    margin-top: 31px;
                     color: #000;
                     font-family: $fontFutura;
                     font-size: 22px;
@@ -454,21 +545,33 @@ button:active {
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 20px;
+                    margin: 15px 0 33px 0;
                 }
 
-                pre {
+                .news-content__item-hashtag {
                     color: #3D9CEA;
                     font-family: $fontFutura;
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 22px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    time {
+                        color: #949494;
+                        font-family: $fontFutura;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
                 }
 
-                span {
-                    color: #949494;
+                a {
+                    color: $colorPrimary;
                     font-family: $fontFutura;
-                    font-size: 14px;
+                    font-size: 16px;
+                    font-style: normal;
                     font-weight: 500;
+                    line-height: normal;
                 }
 
                 a:hover {
@@ -478,8 +581,28 @@ button:active {
                 a:active {
                     opacity: 0.6;
                 }
+
+                a::before {
+                    content: url(../icons/lapa.svg);
+                    margin-right: 4px;
+                }
             }
         }
+    }
+}
+
+@media only screen and (max-width:1280px) {
+    .news-content__list {
+        justify-content: center;
+    }
+
+    .news-content__item-big {
+        order: -1;
+    }
+
+    .news-content__item {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -546,7 +669,7 @@ button:active {
                             border: 2px solid #FF6347;
                         }
 
-                        input:valid{
+                        input:valid {
                             border: 2px solid #90EE90;
                         }
 
@@ -601,7 +724,15 @@ button:active {
             width: 462px;
             margin-left: auto;
             margin-right: auto;
-            
+
         }
+    }
+}
+
+@media only screen and (max-width:1451px) {
+    .feedback-content__map {
+        width: 500px;
+        height: 300px;
+        margin-bottom: 40px;
     }
 }

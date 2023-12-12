@@ -76,7 +76,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -340,7 +340,6 @@ template {
   font-weight: 700;
   src: url("../fonts/FuturaPT-Bold.woff") format("woff");
 }
-
 @font-face {
   font-display: auto;
   font-family: "Futura PT";
@@ -348,7 +347,6 @@ template {
   font-weight: 400;
   src: url("../fonts/FuturaPT-Book.woff") format("woff");
 }
-
 @font-face {
   font-display: auto;
   font-family: "Futura PT Demi";
@@ -356,7 +354,6 @@ template {
   font-weight: 500;
   src: url("../fonts/FuturaPT-Demi.woff") format("woff");
 }
-
 @font-face {
   font-display: auto;
   font-family: "Futura PT";
@@ -364,7 +361,6 @@ template {
   font-weight: 500;
   src: url("../fonts/FuturaPT-Medium.woff") format("woff");
 }
-
 @font-face {
   font-display: auto;
   font-family: "VAG World Bold";
@@ -372,7 +368,6 @@ template {
   font-weight: 500;
   src: url("../fonts/FuturaPT-Medium.woff") format("woff");
 }
-
 /* GENERAL */
 * {
   box-sizing: border-box;
@@ -444,7 +439,6 @@ a {
 .site-header {
   width: 100%;
 }
-
 .site-header__information {
   height: 39px;
   margin-left: auto;
@@ -453,7 +447,6 @@ a {
   display: flex;
   background-color: #F9F9F9;
 }
-
 .site-header__information__box {
   width: 100%;
   margin: 0;
@@ -462,7 +455,6 @@ a {
   justify-content: space-between;
   font-family: "Futura PT";
 }
-
 .site-header__information__box-address {
   display: flex;
   align-items: center;
@@ -472,17 +464,17 @@ a {
   font-weight: 500;
   font-family: "Futura PT";
 }
-
-.site-header__information__box-address svg {
+.site-header__information__box-address::before {
+  content: url(../icons/home.svg);
   margin-right: 9px;
+  width: 14px;
+  height: 13px;
 }
-
-.site-header__information__box-box {
+.site-header__information__box .site-header__information__link-box {
   display: flex;
   align-items: center;
 }
-
-.site-header__information__box-box-link {
+.site-header__information__box .site-header__information__link-box .site-header__information__box-link {
   font-family: "Futura PT";
   color: #333333;
   display: flex;
@@ -491,38 +483,47 @@ a {
   font-size: 14px;
   font-weight: 500;
 }
-
-.site-header__information__box-box-link svg {
-  margin-right: 9px;
-}
-
-.site-header__information__box-box-link:hover {
+.site-header__information__box .site-header__information__link-box .site-header__information__box-link:hover {
   color: #FFBD54;
 }
-
-.site-header__information__box__days-box {
+.site-header__information__box .site-header__information__link-box .site-header__information__box-link:not(:first-child)::before {
+  content: url(../icons/circle.svg);
+  margin: 6px 9px;
+  width: 4px;
+}
+.site-header__information__box .site-header__information__link-box .site-header__information__box-link:first-child::before {
+  content: url(../icons/phone.svg);
+  margin-right: 9px;
+  width: 13px;
+  height: 13px;
+}
+.site-header__information__box .site-header__information__days-box {
   width: 100%;
   max-width: 286px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
-.site-header__information__box__days-box-days {
+.site-header__information__box .site-header__information__days-box-days {
   display: flex;
   align-items: center;
   color: #333;
   font-size: 14px;
   font-weight: 500;
 }
-
-.site-header__information__box__days-box-days svg {
-  margin-right: 9px;
+.site-header__information__box .site-header__information__days-box .days1 {
+  width: 118px;
+  margin-right: 17px;
 }
-
-.site-header__information__box__days-box .days2 {
-  margin-left: 17px;
+.site-header__information__box .site-header__information__days-box .days2 {
+  width: 116px;
 }
-
+.site-header__information__box .site-header__information__days-box::before {
+  content: url(../icons/schedule.svg);
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+}
 .site-header__navigation {
   font-family: "Futura PT";
   width: 100%;
@@ -530,7 +531,6 @@ a {
   background-color: #fff;
   display: flex;
 }
-
 .site-header__navigation-wrapper {
   width: 100%;
   max-width: 1340px;
@@ -540,26 +540,21 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
 .site-header__navigation__logo-link {
   display: flex;
   align-items: center;
   position: relative;
   width: 177.5px;
 }
-
 .site-header__navigation__logo-img {
   position: absolute;
 }
-
 .site-header__navigation__logo-img:hover {
   opacity: 0.8;
 }
-
 .site-header__navigation__logo-img:active {
   opacity: 0.6;
 }
-
 .site-header__navigation__nav {
   width: 100%;
   max-width: 725px;
@@ -567,7 +562,6 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
 .site-header__navigation__nav-list {
   width: 100%;
   max-width: 692px;
@@ -577,37 +571,46 @@ a {
   margin: 0;
   padding: 0;
 }
-
 .site-header__navigation__nav-list a:hover {
   opacity: 0.8;
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
-
 .site-header__navigation__nav-list a:active {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
   opacity: 0.6;
 }
-
+.site-header__navigation__nav-list li:first-child::before {
+  content: url(../icons/fish.svg);
+  width: 14px;
+  height: 14px;
+  margin-right: 12px;
+}
 .site-header__navigation button {
   background-color: #fff;
   border: none;
   display: flex;
   align-items: center;
 }
-
-.site-header__navigation button p {
+.site-header__navigation button span {
+  width: 97px;
   margin: 0;
   padding: 0;
+  color: #333;
+  text-align: right;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
 }
-
 .site-header__navigation button p:hover {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
-
+.site-header__navigation button::before {
+  content: url(../icons/lapa.svg);
+  margin-right: 4px;
+}
 .site-header__navigation button:hover {
   opacity: 0.8;
 }
-
 .site-header__navigation button:active {
   opacity: 0.6;
 }
@@ -661,12 +664,10 @@ main {
   background-position: calc(50% - 496.5px) -180px, calc(50% + 655px) bottom;
   background-repeat: no-repeat;
 }
-
 .hero-content__box {
   margin-left: calc(50% + 20px);
   padding-top: 145.77px;
 }
-
 .hero-content__box-title {
   width: 100%;
   max-width: 608px;
@@ -676,7 +677,6 @@ main {
   font-weight: 700;
   line-height: 64px;
 }
-
 .hero-content__box-title span {
   color: #78C0DE;
   font-family: "Futura PT";
@@ -684,7 +684,6 @@ main {
   font-weight: 700;
   line-height: 64px;
 }
-
 .hero-content__box-text {
   width: 100%;
   max-width: 495px;
@@ -695,7 +694,6 @@ main {
   line-height: 21px;
   margin: 29px 0 38px 0;
 }
-
 .hero-content__box-btn {
   color: #FFF;
   font-family: "Futura PT";
@@ -706,11 +704,9 @@ main {
   padding: 15px 48px;
   border: none;
 }
-
 .hero-content__box-btn:hover {
   opacity: 0.8;
 }
-
 .hero-content__box-btn:active {
   opacity: 0.6;
 }
@@ -719,7 +715,6 @@ main {
   margin-top: 102px;
   width: 100%;
 }
-
 .quote-content__box {
   display: flex;
   flex-direction: column;
@@ -727,12 +722,10 @@ main {
   margin-inline: auto;
   width: 100%;
 }
-
 .quote-content__box .open-quote {
   margin-bottom: 70px;
   margin-right: 50px;
 }
-
 .quote-content__box q {
   display: flex;
   width: 100%;
@@ -743,18 +736,15 @@ main {
   font-size: 20px;
   font-weight: 400;
 }
-
 .quote-content__box q span {
   width: 753px;
   height: 78px;
   text-align: center;
 }
-
 .quote-content__box .close-qoute {
   margin-left: 50px;
   margin-top: 70px;
 }
-
 .quote-content__box-cite {
   color: #333;
   font-family: "Futura PT";
@@ -771,11 +761,9 @@ main {
   width: 100%;
   margin-top: 0px;
 }
-
 .service-content .container {
   width: 100%;
 }
-
 .service-content .container h2 {
   color: #333333;
   text-align: center;
@@ -785,7 +773,6 @@ main {
   line-height: 54px;
   margin-bottom: 80px;
 }
-
 .service-content .container div {
   width: 100%;
   max-width: 1310px;
@@ -794,7 +781,6 @@ main {
   justify-content: space-between;
   margin: 0 auto;
 }
-
 .service-content .container div .arrow-div {
   display: flex;
   justify-content: center;
@@ -802,16 +788,13 @@ main {
   width: 50px;
   height: 50px;
 }
-
 .service-content .container div .arrow-div:hover {
   background-color: #FFF;
 }
-
 .service-content .container div .arrow-div:active {
   background-color: #FFF;
   opacity: 0.6;
 }
-
 .service-content .container div .service-content__box-list {
   display: flex;
   width: 100%;
@@ -819,8 +802,10 @@ main {
   padding: 0;
   margin-bottom: 14px;
 }
-
-.service-content .container div .service-content__box-list .service-content__list-list {
+.service-content .container div .service-content__box-list .service-content__list-bitem {
+  width: 100%;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .service-content__list-list {
   display: flex;
   justify-content: space-around;
   width: 605x;
@@ -828,8 +813,7 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
-.service-content .container div .service-content__box-list .service-content__list-list li {
+.service-content .container div .service-content__box-list .service-content__list-bitem .service-content__list-list li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -839,8 +823,7 @@ main {
   height: 201px;
   border-radius: 5px;
 }
-
-.service-content .container div .service-content__box-list .service-content__list-list li h3 {
+.service-content .container div .service-content__box-list .service-content__list-bitem .service-content__list-list li h3 {
   margin-top: 22px;
   text-align: center;
   color: #333333;
@@ -849,20 +832,59 @@ main {
   font-size: 18px;
   line-height: 22px;
 }
-
-.service-content .container div .service-content__box-list .service-content__list-list li:hover {
+.service-content .container div .service-content__box-list .service-content__list-bitem .service-content__list-list li:hover {
   opacity: 0.8;
 }
-
-.service-content .container div .service-content__box-list .service-content__list-list li:active {
+.service-content .container div .service-content__box-list .service-content__list-bitem .service-content__list-list li:active {
   opacity: 0.6;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list1 li:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list1 li:nth-child(1)::before {
+  content: url(../icons/service-doctor.svg);
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list1 li:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list1 li:nth-child(2)::before {
+  content: url(../icons/service-nurse-dog.svg);
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list1 li:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list1 li:nth-child(3)::before {
+  content: url(../icons/service-dog-capelnitsa.svg);
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list2 li:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list2 li:nth-child(1)::before {
+  content: url(../icons/service-dog-soch.svg);
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list2 li:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list2 li:nth-child(2)::before {
+  content: url(../icons/service-microscope.svg);
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list2 li:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+.service-content .container div .service-content__box-list .service-content__list-bitem .list2 li:nth-child(3)::before {
+  content: url(../icons/service-dog-cat.svg);
 }
 
 /* OBSERVE SECTION */
 .observe-content {
   width: 100%;
 }
-
 .observe-content__box {
   width: 100%;
   max-width: 1223px;
@@ -873,13 +895,11 @@ main {
   justify-content: space-between;
   background-color: #fff;
 }
-
 .observe-content__box div {
   width: 100%;
   max-width: 492px;
   padding-right: 70px;
 }
-
 .observe-content__box div h2 {
   margin-top: 37px;
   font-family: "Futura PT Demi";
@@ -888,7 +908,6 @@ main {
   line-height: 20px;
   color: #333333;
 }
-
 .observe-content__box div p {
   color: #949494;
   font-family: "Futura PT";
@@ -896,49 +915,59 @@ main {
   font-size: 16px;
   margin: 18px 0 34px 0;
 }
-
-.observe-content__box div div {
+.observe-content__box div .observe-content__btn-div {
+  width: 447px;
   display: flex;
-  width: 100%;
-  max-width: 447px;
   padding: 0;
   justify-content: space-between;
 }
-
-.observe-content__box div div .observe-content__btn-price {
+.observe-content__box div .observe-content__btn-div .observe-content__btn-price {
+  width: 185px;
+  height: 50px;
   display: flex;
   align-items: center;
   background-color: #FFBD54;
-  color: #fff;
-  margin-right: 8px;
-  font-family: "Futura PT";
-  font-size: 16px;
-  font-weight: 500;
   border: none;
   padding: 15px 36px;
   border-radius: 3px;
 }
-
-.observe-content__box div div .observe-content__btn-price .observe-content__btn-img {
-  margin-right: 6px;
+.observe-content__box div .observe-content__btn-div .observe-content__btn-price span {
+  color: #fff;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+  width: 86px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
 }
-
-.observe-content__box div div .observe-content__btn-submit {
+.observe-content__box div .observe-content__btn-div .observe-content__btn-price::before {
+  content: url(../icons/observe-money.svg);
+  margin-right: 9px;
+}
+.observe-content__box div .observe-content__btn-div .observe-content__btn-submit {
+  width: 241px;
+  height: 50px;
   display: flex;
   align-items: center;
   background-color: #333333;
-  color: #fff;
-  font-family: "Futura PT";
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 19px;
   border: none;
   padding: 15px 36px;
   border-radius: 3px;
 }
-
-.observe-content__box div div .observe-content__btn-submit .observe-content__btn-img {
-  margin-right: 6px;
+.observe-content__box div .observe-content__btn-div .observe-content__btn-submit span {
+  color: #fff;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-weight: 500;
+  width: 140px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+}
+.observe-content__box div .observe-content__btn-div .observe-content__btn-submit::before {
+  content: url(../icons/observe-document.svg);
+  margin-right: 9px;
 }
 
 button:hover {
@@ -957,13 +986,11 @@ button:active {
   background-position: calc(50% + 362px) 0px, 0 110px;
   margin-top: 127px;
 }
-
 .subscription-content .subscription-content__box {
   max-width: 900px;
   padding-top: 200px;
   padding-right: 270px;
 }
-
 .subscription-content .subscription-content__box h2 {
   width: 494px;
   color: #FFF;
@@ -973,7 +1000,6 @@ button:active {
   line-height: 20px;
   margin-bottom: 32px;
 }
-
 .subscription-content .subscription-content__box .subscription-content__wrapper {
   width: 100%;
   max-width: 544px;
@@ -981,7 +1007,6 @@ button:active {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .subscription-content .subscription-content__box .subscription-content__wrapper input {
   width: 335px;
   height: 50px;
@@ -990,7 +1015,6 @@ button:active {
   border: none;
   margin-bottom: 30px;
 }
-
 .subscription-content .subscription-content__box .subscription-content__wrapper input::-moz-placeholder {
   color: #949494;
   font-family: "Futura PT";
@@ -999,7 +1023,6 @@ button:active {
   line-height: 20px;
   border-radius: 3px;
 }
-
 .subscription-content .subscription-content__box .subscription-content__wrapper input::placeholder {
   color: #949494;
   font-family: "Futura PT";
@@ -1008,7 +1031,6 @@ button:active {
   line-height: 20px;
   border-radius: 3px;
 }
-
 .subscription-content .subscription-content__box .subscription-content__wrapper button {
   width: 184px;
   height: 50px;
@@ -1032,7 +1054,6 @@ button:active {
   line-height: 20px;
   margin: 165px 0 95px 0;
 }
-
 .news-content .news-content__list {
   width: 100%;
   display: flex;
@@ -1040,16 +1061,14 @@ button:active {
   justify-content: space-between;
   padding: 0;
 }
-
 .news-content .news-content__list .news-content__item {
+  width: 100%;
   max-width: 305px;
   height: 435px;
 }
-
 .news-content .news-content__list .news-content__item div {
   padding: 30px;
 }
-
 .news-content .news-content__list .news-content__item div h3 {
   color: #000;
   font-family: "Futura PT";
@@ -1057,96 +1076,128 @@ button:active {
   font-weight: 700;
   line-height: 25px;
 }
-
 .news-content .news-content__list .news-content__item div p {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  margin: 13px 0 28px 0;
 }
-
-.news-content .news-content__list .news-content__item div span {
+.news-content .news-content__list .news-content__item div time {
+  width: 71px;
   color: #949494;
   font-family: "Futura PT";
   font-size: 14px;
   font-weight: 500;
+  text-align: right;
+  margin-left: 175px;
 }
-
+.news-content .news-content__list .news-content__item div a {
+  color: #333333;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .news-content .news-content__list .news-content__item div a:hover {
   opacity: 0.8;
 }
-
 .news-content .news-content__list .news-content__item div a:active {
   opacity: 0.6;
 }
-
+.news-content .news-content__list .news-content__item div a::before {
+  content: url(../icons/lapa.svg);
+  margin-right: 4px;
+}
 .news-content .news-content__list .news-content__item-big {
   display: flex;
   width: 640px;
 }
-
+.news-content .news-content__list .news-content__item-big img {
+  margin: 0 auto;
+}
 .news-content .news-content__list .news-content__item-big div {
   padding: 30px;
 }
-
 .news-content .news-content__list .news-content__item-big div h3 {
+  margin-top: 31px;
   color: #000;
   font-family: "Futura PT";
   font-size: 22px;
   font-weight: 700;
   line-height: 25px;
 }
-
 .news-content .news-content__list .news-content__item-big div p {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  margin: 15px 0 33px 0;
 }
-
-.news-content .news-content__list .news-content__item-big div pre {
+.news-content .news-content__list .news-content__item-big div .news-content__item-hashtag {
   color: #3D9CEA;
   font-family: "Futura PT";
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  display: flex;
+  justify-content: space-between;
 }
-
-.news-content .news-content__list .news-content__item-big div span {
+.news-content .news-content__list .news-content__item-big div .news-content__item-hashtag time {
   color: #949494;
   font-family: "Futura PT";
   font-size: 14px;
   font-weight: 500;
 }
-
+.news-content .news-content__list .news-content__item-big div a {
+  color: #333333;
+  font-family: "Futura PT";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .news-content .news-content__list .news-content__item-big div a:hover {
   opacity: 0.8;
 }
-
 .news-content .news-content__list .news-content__item-big div a:active {
   opacity: 0.6;
 }
+.news-content .news-content__list .news-content__item-big div a::before {
+  content: url(../icons/lapa.svg);
+  margin-right: 4px;
+}
 
+@media only screen and (max-width: 1280px) {
+  .news-content__list {
+    justify-content: center;
+  }
+  .news-content__item-big {
+    order: -1;
+  }
+  .news-content__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .feedback-content {
   margin-top: 265px;
   width: 100%;
 }
-
 .feedback-content .feedback-container {
   width: 100%;
   max-width: 1463px;
   margin-left: auto;
   margin-right: auto;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box {
   width: 990px;
   background: url(../images/feedback-bg.png), no-repeat;
@@ -1157,14 +1208,12 @@ button:active {
   padding-left: 166px;
   padding-bottom: 74px;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box h2 {
   color: #FFF;
   font-family: "Futura PT";
   font-size: 48px;
   font-weight: 700;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box p {
   color: #949494;
   font-family: "Futura PT";
@@ -1174,17 +1223,14 @@ button:active {
   max-width: 339px;
   margin-bottom: 30px;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form {
   width: 100%;
   max-width: 375px;
   height: 373px;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label {
   width: 100%;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input {
   width: 100%;
   max-width: 375px;
@@ -1192,23 +1238,18 @@ button:active {
   border: none;
   background-color: #FFF;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:not(:focus):not(:-moz-placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:not(:focus):not(:placeholder-shown):invalid {
   border: 2px solid #FF6347;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input:valid {
   border: 2px solid #90EE90;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label .feedback-content__input2 {
   margin: 14px 0;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label textarea {
   width: 100%;
   max-width: 375px;
@@ -1217,14 +1258,12 @@ button:active {
   height: 165px;
   padding: 22px 0 0 17px;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::-moz-placeholder {
   color: #949494;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 400;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::placeholder,
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label textarea {
   color: #949494;
@@ -1232,15 +1271,12 @@ button:active {
   font-size: 16px;
   font-weight: 400;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::-moz-placeholder {
   padding-left: 17px;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form label input::placeholder {
   padding-left: 17px;
 }
-
 .feedback-content .feedback-container .feedback-content__wrapper .feedback-content__box form button {
   margin-top: 25px;
   background-color: #FFBD54;
@@ -1252,27 +1288,31 @@ button:active {
   font-size: 16px;
   font-weight: 500;
 }
-
 .feedback-content .feedback-container .feedback-content__map {
   width: 462px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media only screen and (max-width: 1451px) {
+  .feedback-content__map {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+}
 /* FOOTER */
 .site-footer {
   width: 100%;
   margin-top: 247px;
   background-color: #F3F3F3;
 }
-
 .site-footer .container .site-footer__wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box {
   margin-left: auto;
   margin-right: auto;
@@ -1281,66 +1321,53 @@ button:active {
   justify-content: space-between;
   margin-top: 30px;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box a:hover {
   opacity: 0.8;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box a:active {
   opacity: 0.6;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   flex-direction: column;
   width: 100%;
   max-width: 288px;
   height: 90px;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li {
+  height: 30px;
   width: 144px;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li a {
   color: #333;
   font-family: "Futura PT";
   font-size: 16px;
   font-weight: 500;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li a:hover {
   opacity: 0.8;
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__box nav ul li a:active {
   background-image: linear-gradient(to bottom, transparent 60%, #F4FFAD 20%, transparent);
   opacity: 0.6;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information {
   margin-left: auto;
   margin-right: auto;
   width: 664px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box {
   max-width: 150px;
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
-
-.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box img {
-  margin-right: 10px;
-  margin-bottom: 23px;
-}
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box p {
   width: 120px;
   margin: 0;
@@ -1350,11 +1377,13 @@ button:active {
   font-size: 14px;
   font-weight: 500;
 }
-
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__days-box::before {
+  content: url(../icons/schedule.svg);
+  margin-right: 14px;
+}
 .site-footer .container .site-footer__wrapper .site-footer__information address {
   max-width: 182px;
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
   color: #333;
@@ -1363,31 +1392,29 @@ button:active {
   font-weight: 500;
   font-style: normal;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information address img {
   margin-right: 10px;
   margin-bottom: 23px;
 }
-
+.site-footer .container .site-footer__wrapper .site-footer__information address::before {
+  content: url(../icons/home.svg);
+  margin-right: 9px;
+}
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number {
   width: 100%;
   max-width: 170px;
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number img {
   margin-right: 10px;
   margin-bottom: 30px;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div {
   display: flex;
   flex-direction: column;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a {
   width: 100%;
   width: 115px;
@@ -1398,17 +1425,18 @@ button:active {
   font-size: 14px;
   font-weight: 500;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a:hover {
   color: #FFBD54;
 }
-
 .site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number div a:active {
   color: #FFBD54;
   opacity: 0.6;
 }
-
-.site-footer .container cite {
+.site-footer .container .site-footer__wrapper .site-footer__information .site-footer__phone-number::before {
+  content: url(../icons/phone.svg);
+  margin-right: 9px;
+}
+.site-footer .container span {
   display: block;
   color: #5C5C5C;
   text-align: right;
@@ -1426,55 +1454,44 @@ button:active {
 }
 
 /* MEDIA */
-@media only screen and (min-width: 350px) and (max-width: 767px) {
+@media only screen and (min-width: 570px) and (max-width: 767px) {
   .site-header__navigation__nav-list {
     margin-left: 40px;
     flex-wrap: wrap;
   }
-
-  .site-header__navigation {
-    margin-top: 50px;
+  .site-header__information {
+    height: 80px;
   }
-
   .phone-wrapper {
-    width: 132px;
+    width: 140px;
   }
-
   .service-content__box-list {
     flex-wrap: wrap;
   }
-
   .hero-content {
     background-size: 500px 500px, 0;
     background-position: calc(50% + 230px) -90px, 0px;
   }
-
   .hero-content__box {
     margin-left: 20%;
   }
-
   .observe-content__img {
     margin: 0 auto;
   }
-
   .observe-content__content {
     margin-left: auto;
     margin-right: auto;
   }
-
   .subscription-content__box {
     margin-left: 50px;
   }
-
   .news-content__list {
     flex-wrap: wrap;
   }
-
   .news-content__item {
     margin-left: auto;
     margin-right: auto;
   }
-
   .news-content__item-big {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1482,92 +1499,70 @@ button:active {
     margin-right: auto;
     flex-wrap: wrap;
   }
-
   .feedback-container {
     flex-wrap: wrap;
   }
-
   .feedback-content__map {
     width: 500px;
     height: 300px;
     margin-bottom: 40px;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .site-header__navigation__nav-list {
     margin-left: 40px;
   }
-
-  .phone-wrapper {
-    width: 132px;
+  .site-header__information {
+    height: 80px;
   }
-
+  .phone-wrapper {
+    width: 140px;
+  }
   .service-content__box-list {
     flex-wrap: wrap;
   }
-
   .hero-content {
     background-size: 500px 500px, 0;
     background-position: calc(50% - 230px), 0;
   }
-
   .observe-content__img {
     margin: 0 auto;
   }
-
   .observe-content__content {
     margin-left: auto;
     margin-right: auto;
   }
-
   .subscription-content__box {
     margin-left: 80px;
   }
-
   .news-content__list {
     flex-wrap: wrap;
   }
-
   .news-content__item {
     margin-left: auto;
     margin-right: auto;
   }
-
   .news-content__item-big {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
   }
-
   .feedback-container {
     flex-wrap: wrap;
   }
-
-  .feedback-content__map {
-    width: 500px;
-    height: 300px;
-    margin-bottom: 40px;
-  }
-
   .subscription-content__wrapper {
     flex-wrap: wrap;
   }
 }
-
 @media only screen and (min-width: 1100px) {
   .observe-content__img {
     margin: 0 auto;
   }
-
   .observe-content__content {
     margin: 0 auto;
   }
-
   .subscription-content__box {
     margin-left: 178px;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
